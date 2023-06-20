@@ -1,0 +1,21 @@
+/* 기본값 초기화 */
+body,p{
+    margin: 0;
+}
+
+*{
+    /* 크기변경 방지 */
+    box-sizing: border-box;
+}
+ul,li{
+    /* 앞에*모양과 빈공간 잡히는거 삭제 */
+    margin: 0; padding: 0; list-style-type: none;
+}
+a{text-decoration: none;}
+img{
+    /* 폰트와 이미지 겹칠때 아래에 빈공간 생기는거 삭제 */
+    vertical-align: top;
+}
+figure{
+    margin: 0;
+}

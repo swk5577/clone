@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+KR:wght@100;400;700&display=swap");
+/* 기본값 초기화 */
+body, p {
+  margin: 0;
+}
+
+* {
+  /* 크기변경 방지 */
+  box-sizing: border-box;
+}
+
+ul, li {
+  /* 앞에*모양과 빈공간 잡히는거 삭제 */
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  /* 폰트와 이미지 겹칠때 아래에 빈공간 생기는거 삭제 */
+  vertical-align: top;
+}
+
+figure {
+  margin: 0;
+}
+
+button {
+  border: none;
+}
+
+* {
+  font-family: "Libre Baskerville", serif;
+}
+
+p {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.bt {
+  background-image: url(../img/button.png);
+  width: 100%;
+  height: 100px;
+}
+
+body {
+  background-color: #f0ede6;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4%;
+}
+header img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header nav a {
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  padding: 0 20px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main article {
+  text-align: center;
+}
+main article h2 {
+  white-space: pre-line;
+}
+main article figure figcaption {
+  white-space: pre-line;
+}/*# sourceMappingURL=index.css.map */
