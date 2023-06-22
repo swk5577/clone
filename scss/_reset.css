@@ -1,5 +1,10 @@
 /* 기본값 초기화 */
-body,p{
+body{
+    
+    font-family: 'Libre Baskerville', 'Noto Sans KR', serif;
+}
+
+h2,body,p,b{
     margin: 0;
 }
 

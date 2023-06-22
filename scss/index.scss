@@ -1,240 +1,322 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+KR:wght@100;400;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0");
-
-
 @import "_reset";
 @import "_mixin";
 @import "_anima";
 
 
-*{
-    font-family: 'Libre Baskerville', serif;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-p{
-    font-family: 'Noto Sans KR', sans-serif;
-}
 
-.bt{ @include flex();
+.bt {
+    @include flex();
     color: black;
-    p{
+
+    p {
         font-family: 'Libre Baskerville', serif;
         font-weight: bold;
         font-size: 1vw;
         background-image: url(../img/button.png);
-        width: 100%; height: 6vw;
+        width: 100%;
+        height: 6vw;
         background-size: contain;
         @include flex();
     }
 }
 
+.top {
+    position: fixed;
+    right: 2vw;
+    bottom: 3vw;
+    font-size: 1.5vw;
+    color: black;
+    @include flex();
+    font-weight: bold;
+    flex-direction: column;
 
-body{
-    background-color: #f0ede6;
-}
-
-header{
-    position: relative;
-    @include flex(space-between,);
-    width: 100%; height: 8vw;
-    padding: 0 3%;
-
-    img{width: 12vw;
-    object-fit: contain;
-    transition: 0.5s;
-}
-    >nav{
-        >a{display: inline;
-            color: black;
-        font-size: 1.2vw;
-        font-weight: bolder;
-        padding: 0 1.4vw;
-        transition: 0.5s;
-        }
+    &::before {
+        display: block;
+        content: 'expand_less';
+        font-family: material symbols outlined;
     }
 }
 
+header {
+    position: relative;
+    @include flex(space-between, );
+    width: 100%;
+    height: 8vw;
+    padding: 0 3%;
+    
+    img {
+        width: 12vw;
+        object-fit: contain;
+        transition: 0.5s;
+    }
+    nav {
+        z-index: 5;
+        >ul {display: flex;
+            li {width: 150%;
+                position: relative;
+                &:hover:nth-of-type(1) .n_bradns{
+                    opacity: 100%;
+                }
+                &:hover:nth-of-type(2) .n_outdoor{
+                    opacity: 100%;
+                }
+                &:hover:nth-of-type(3) .n_indoor{
+                    opacity: 100%;
+                }
+                >a{
+                padding: 0 1.5vw;
+                line-height: 2.3vw;
+                display: inline;
+                font-size: 1.2vw;
+                font-weight: bolder;
+                transition: 0.5s;
+                color: black;
 
-main{
+                &:nth-of-type(1):hover .n_bradns {
+                    opacity: 100%;
+                }}
+            }
+
+        }
+    }
+
+    .n_bradns,
+    .n_outdoor,
+    .n_indoor {
+        position: absolute;
+        top: 2vw; left: 0;
+        background-color: black;
+        font-weight: bold;
+        padding: 0.8vw 0;
+        opacity: 0;
+        width: 100%;
+        a{
+            color: white;
+            font-size: 0.9vw;
+        }
+    }
+
+}
+
+
+main {
     margin: 0 auto;
     width: 100%;
     flex-direction: column;
     @include flex();
 
-    article{  /* all */
-        width: 80%;     
-        white-space: pre-line;     
+    article {
+        /* all */
+        width: 80%;
+        white-space: pre-line;
         text-align: center;
-        h2{
+
+        h2 {
             font-size: 4.5vw;
         }
-        div{
+
+        div {
             width: 100%;
-            display: flex;
-            img{
+
+            img {
                 width: 50%;
             }
-            figure{
+
+            figure {
                 flex-grow: 1;
                 @include flex(center);
-                flex-direction:column;
-                figcaption{
-                font-size: 1vw;
-                font-weight: 600;
+                flex-direction: column;
+
+                figcaption {
+                    font-size: 1vw;
+                    font-weight: 600;
                 }
             }
-            }
         }
+    }
 
 
-    >article:nth-of-type(1){
-        h2{width: 100%;
+    >article:nth-of-type(1) {
+        h2 {
+            width: 100%;
             font-size: 7vw;
             margin: 0;
             position: absolute;
-            top: 12vw; left: 50%;
+            top: 12vw;
+            left: 50%;
             transform: translatex(-50%);
             z-index: 2;
         }
-        figure{
-            img{width: 70%;}
+
+        figure {
+            img {
+                width: 70%;
+            }
+
             margin-top: 15vw;
-            figcaption{
-                p{
-                font-weight: 600;
-                font-size: 1vw;
-                margin: 3vw 0 2vw;
+
+            figcaption {
+                p {
+                    font-weight: 600;
+                    font-size: 1vw;
+                    margin: 3vw 0 2vw;
                 }
             }
         }
     }
 
 
-    >article:nth-of-type(2){
-        figcaption{
-            p{
-            margin: 1vw 0 0.5vw;
+    >article:nth-of-type(2) {
+        margin-bottom: 10vw;
+        video{
+            margin: 5vw 0;
         }
+        div{
+            display: flex;
+
+        
+        figcaption {
+            p {
+                margin: 1vw 0 0.5vw;
+            }
         }
+    }
     }
 
 
-        >article:nth-of-type(3) {
-            width: 100%;
-            overflow: hidden;
-    
+    >article:nth-of-type(3) {
+        width: 100%;
+        overflow: hidden;
+        div {
             div {
-                position: relative;
                 @include flex(flex-start, flex-start);
                 gap: 3vw;
                 margin-left: 10vw;
-    
+
                 a {
                     color: black;
-    
+
                     >figure {
                         position: relative;
                         top: 0;
                         left: 0;
                         @include flex (flex-start, flex-start);
-    
+
                         img {
                             width: 23vw;
                             transition: 0.7s;
                         }
-    
+
                         img:nth-of-type(1) {
                             position: absolute;
                             top: 0;
                             left: 0;
                         }
-    
+
                         img:nth-of-type(1):hover {
                             opacity: 0;
                         }
-    
+
                         figcaption {
                             text-align: left;
                             font-size: 0.9vw;
-    
+
                         }
                     }
                 }
             }
 
-        button{
-            font-family:"material symbols outlined";
-            font-size: 6vw;
-            background-color: #f0ede6;
+            button {
+                font-family: "material symbols outlined";
+                font-size: 6vw;
+                background-color: #f0ede6;
 
-            &:before{
-                content: 'arrow_left_alt';}
+                &:nth-of-type(1):before {
+                    content: 'arrow_left_alt';
+                }
 
-            &:after{
-                content: 'arrow_right_alt';}
-        
+                &:nth-of-type(2):after {
+                    content: 'arrow_right_alt';
+                }
+            }
         }
+
     }
 
 
-    hr{
+    hr {
         width: 100%;
         border-top: 0.1vw solid black;
     }
 
-    .tr{width: 100%;
+    .tr {
+        width: 100%;
         overflow: hidden;
 
-        p{font-size: 7vw;
-        font-weight: bold;
-    font-family: 'Libre Baskerville', serif;
-    white-space: nowrap;
-    white-space: pre;
-    padding: 2vw 0;
-}}
+        p {
+            font-size: 7vw;
+            font-weight: bold;
+            font-family: 'Libre Baskerville', serif;
+            white-space: nowrap;
+            white-space: pre;
+            padding: 2vw 0;
+        }
+    }
 
 
-    article:nth-of-type(4){
+    article:nth-of-type(4) {
 
-        div{
+        div {
             display: block;
             position: relative;
-            top:0; left: 50%;
+            top: 0;
+            left: 50%;
             transform: translatex(-50%);
-            width: 72%; height: 63vw;
-            a{display: block;
+            width: 72%;
+            height: 63vw;
+
+            a {
+                display: block;
                 position: absolute;
                 color: black;
-                figure{
-                    @include flex(normal,flex-start);
+
+                figure {
+                    @include flex(normal, flex-start);
                     width: 25vw;
-                    img{
-                    width: 100%;
+
+                    img {
+                        width: 100%;
                     }
-                    >figcaption{
+
+                    >figcaption {
                         text-align: left;
 
-                        b{font-family: 'Noto Sans KR', sans-serif;
-                        font-size: 1.3vw;
+                        b {
+                            font-family: 'Noto Sans KR', sans-serif;
+                            font-size: 1.3vw;
                         }
                     }
                 }
             }
 
-            >a:nth-of-type(1){
-                top: 0; left: 0;
+            >a:nth-of-type(1) {
+                top: 0;
+                left: 0;
             }
-            >a:nth-of-type(2){
-                top: 10vw; right: 0;
+
+            >a:nth-of-type(2) {
+                top: 10vw;
+                right: 0;
             }
-            >a:nth-of-type(3){
-                bottom: 0; left: 0;
+
+            >a:nth-of-type(3) {
+                bottom: 0;
+                left: 0;
             }
-            
+
         }
 
-        .bt > p::before{
+        .bt>p::before {
             font-family: "material symbols outlined";
             content: 'add';
             font-size: 1.5vw;
@@ -243,14 +325,23 @@ main{
     }
 
 
-    article:nth-of-type(5){
-        h2{font-size: 3.5vw}
-        div{
+    article:nth-of-type(5) {
+        margin-top: 3vw;
+
+        h2 {
+            font-size: 3.5vw
+        }
+
+        div {
             @include flex(space-between);
-            a{@include flex();
-                width: 23%; height: 18vw;
+
+            a {
+                @include flex();
+                width: 23%;
+                height: 18vw;
                 overflow: hidden;
-                img{
+
+                img {
                     width: 100%;
                     object-fit: cover;
                 }
@@ -310,21 +401,22 @@ footer {
             p:nth-of-type(3) {
                 font-family: 'Libre Baskerville', serif;
             }
-            >p:nth-of-type(2) {
-                    white-space: pre-line;
-                    color: #666;
-                    line-height: 1vw;
-                    font-size: 0.8vw;
-                }
 
-                >p:nth-of-type(3) {
-                    font-size: 1.3vw;
-                    margin: 4vw 0;
-                    color: #666;
-                }
+            >p:nth-of-type(2) {
+                white-space: pre-line;
+                color: #666;
+                line-height: 1vw;
+                font-size: 0.8vw;
+            }
+
+            >p:nth-of-type(3) {
+                font-size: 1.3vw;
+                margin: 4vw 0;
+                color: #666;
+            }
         }
 
-        
+
 
         div:nth-of-type(2) {
             @include flex (flex-end, flex-start);

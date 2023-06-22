@@ -6,12 +6,18 @@ html {
   font-size: 6.25%;
 }
 
-body, p {
+body {
+  background-color: #f0ede6;
+  font-family: "Libre Baskerville", "Noto Sans KR", serif;
+}
+
+h1, h2, h3, p, figure, body, video {
   margin: 0;
 }
 
 * {
-  /* 크기변경 방지 */
+  background-repeat: no-repeat;
+  background-position: center;
   box-sizing: border-box;
 }
 
@@ -76,16 +82,6 @@ main .tr p {
     transform: translateX(-180%);
   }
 }
-* {
-  font-family: "Libre Baskerville", serif;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-p {
-  font-family: "Noto Sans KR", sans-serif;
-}
-
 .bt {
   display: flex;
   justify-content: center;
@@ -105,8 +101,22 @@ p {
   align-items: center;
 }
 
-body {
-  background-color: #f0ede6;
+.top {
+  position: fixed;
+  right: 2vw;
+  bottom: 3vw;
+  font-size: 1.5vw;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex-direction: column;
+}
+.top::before {
+  display: block;
+  content: "expand_less";
+  font-family: material symbols outlined;
 }
 
 header {
@@ -124,13 +134,54 @@ header img {
      object-fit: contain;
   transition: 0.5s;
 }
-header > nav > a {
+header nav {
+  z-index: 5;
+}
+header nav > ul {
+  display: flex;
+}
+header nav > ul li {
+  width: 150%;
+  position: relative;
+}
+header nav > ul li:hover:nth-of-type(1) .n_bradns {
+  opacity: 100%;
+}
+header nav > ul li:hover:nth-of-type(2) .n_outdoor {
+  opacity: 100%;
+}
+header nav > ul li:hover:nth-of-type(3) .n_indoor {
+  opacity: 100%;
+}
+header nav > ul li > a {
+  padding: 0 1.5vw;
+  line-height: 2.3vw;
   display: inline;
-  color: black;
   font-size: 1.2vw;
   font-weight: bolder;
-  padding: 0 1.4vw;
   transition: 0.5s;
+  color: black;
+}
+header nav > ul li > a:nth-of-type(1):hover .n_bradns {
+  opacity: 100%;
+}
+header .n_bradns,
+header .n_outdoor,
+header .n_indoor {
+  position: absolute;
+  top: 2vw;
+  left: 0;
+  background-color: black;
+  font-weight: bold;
+  padding: 0.8vw 0;
+  opacity: 0;
+  width: 100%;
+}
+header .n_bradns a,
+header .n_outdoor a,
+header .n_indoor a {
+  color: white;
+  font-size: 0.9vw;
 }
 
 main {
@@ -141,7 +192,8 @@ main {
   justify-content: center;
   align-items: center;
 }
-main article { /* all */
+main article {
+  /* all */
   width: 80%;
   white-space: pre-line;
   text-align: center;
@@ -151,7 +203,6 @@ main article h2 {
 }
 main article div {
   width: 100%;
-  display: flex;
 }
 main article div img {
   width: 50%;
@@ -188,25 +239,33 @@ main > article:nth-of-type(1) figure figcaption p {
   font-size: 1vw;
   margin: 3vw 0 2vw;
 }
-main > article:nth-of-type(2) figcaption p {
+main > article:nth-of-type(2) {
+  margin-bottom: 10vw;
+}
+main > article:nth-of-type(2) video {
+  margin: 5vw 0;
+}
+main > article:nth-of-type(2) div {
+  display: flex;
+}
+main > article:nth-of-type(2) div figcaption p {
   margin: 1vw 0 0.5vw;
 }
 main > article:nth-of-type(3) {
   width: 100%;
   overflow: hidden;
 }
-main > article:nth-of-type(3) div {
-  position: relative;
+main > article:nth-of-type(3) div div {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 3vw;
   margin-left: 10vw;
 }
-main > article:nth-of-type(3) div a {
+main > article:nth-of-type(3) div div a {
   color: black;
 }
-main > article:nth-of-type(3) div a > figure {
+main > article:nth-of-type(3) div div a > figure {
   position: relative;
   top: 0;
   left: 0;
@@ -214,31 +273,31 @@ main > article:nth-of-type(3) div a > figure {
   justify-content: flex-start;
   align-items: flex-start;
 }
-main > article:nth-of-type(3) div a > figure img {
+main > article:nth-of-type(3) div div a > figure img {
   width: 23vw;
   transition: 0.7s;
 }
-main > article:nth-of-type(3) div a > figure img:nth-of-type(1) {
+main > article:nth-of-type(3) div div a > figure img:nth-of-type(1) {
   position: absolute;
   top: 0;
   left: 0;
 }
-main > article:nth-of-type(3) div a > figure img:nth-of-type(1):hover {
+main > article:nth-of-type(3) div div a > figure img:nth-of-type(1):hover {
   opacity: 0;
 }
-main > article:nth-of-type(3) div a > figure figcaption {
+main > article:nth-of-type(3) div div a > figure figcaption {
   text-align: left;
   font-size: 0.9vw;
 }
-main > article:nth-of-type(3) button {
+main > article:nth-of-type(3) div button {
   font-family: "material symbols outlined";
   font-size: 6vw;
   background-color: #f0ede6;
 }
-main > article:nth-of-type(3) button:before {
+main > article:nth-of-type(3) div button:nth-of-type(1):before {
   content: "arrow_left_alt";
 }
-main > article:nth-of-type(3) button:after {
+main > article:nth-of-type(3) div button:nth-of-type(2):after {
   content: "arrow_right_alt";
 }
 main hr {
@@ -304,6 +363,9 @@ main article:nth-of-type(4) .bt > p::before {
   content: "add";
   font-size: 1.5vw;
   margin-right: 0.5vw;
+}
+main article:nth-of-type(5) {
+  margin-top: 3vw;
 }
 main article:nth-of-type(5) h2 {
   font-size: 3.5vw;
