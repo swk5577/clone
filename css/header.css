@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* 기본값 초기화 */
+html {
+  font-size: 6.25%;
+}
+
 body, p {
   margin: 0;
 }
@@ -25,10 +29,11 @@ img {
   vertical-align: top;
 }
 
-figure {
+figure, figcaption {
   margin: 0;
 }
 
 button {
   border: none;
+  background-color: none;
 }
