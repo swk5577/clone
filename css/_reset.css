@@ -1,11 +1,4 @@
-
-// common.scss (다중페이지 공동스타일)
-@import "_mixin";
-
 /* 기본값 초기화 */
-html{
-    font-size: 6.25%;
-}
 body,p{
     margin: 0;
 }
@@ -23,11 +16,6 @@ img{
     /* 폰트와 이미지 겹칠때 아래에 빈공간 생기는거 삭제 */
     vertical-align: top;
 }
-figure,figcaption{
+figure{
     margin: 0;
-}
-
-button{
-    border: none;
-    background-color: none;
 }
