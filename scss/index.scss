@@ -8,6 +8,7 @@
 
     img {
         position: absolute;
+        z-index: 10;
 
         &:hover {
             transform: rotate(40deg);
@@ -159,6 +160,8 @@ header {
 
 
 main {
+    position: relative;
+    overflow: hidden;
     margin: 0 auto;
     width: 100%;
     flex-direction: column;
@@ -382,15 +385,16 @@ main {
 
 
         article:nth-of-type(4) {
-
+            margin-top: 5vw;
             div {
                 display: block;
                 position: relative;
+                margin-top: 3vw;
                 top: 0;
                 left: 50%;
                 transform: translatex(-50%);
                 width: 72%;
-                height: 63vw;
+                height: 65vw;
 
                 a {
                     display: block;

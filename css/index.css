@@ -101,11 +101,24 @@ main .tr p {
     transform: scale(1);
   }
 }
+footer > div:nth-of-type(1) {
+  animation: footup 1s infinite;
+}
+
+@keyframes footup {
+  0%, 50% {
+    transform: translateY(-80%);
+  }
+  51%, 100% {
+    transform: translateY(-60%);
+  }
+}
 .backic {
   width: 100%;
 }
 .backic img {
   position: absolute;
+  z-index: 10;
 }
 .backic img:hover {
   transform: rotate(40deg);
@@ -241,6 +254,8 @@ header .n_indoor a {
 }
 
 main {
+  position: relative;
+  overflow: hidden;
   margin: 0 auto;
   width: 100%;
   flex-direction: column;
@@ -425,14 +440,18 @@ main .tr p {
   white-space: pre;
   padding: 2vw 0;
 }
+main article:nth-of-type(4) {
+  margin-top: 5vw;
+}
 main article:nth-of-type(4) div {
   display: block;
   position: relative;
+  margin-top: 3vw;
   top: 0;
   left: 50%;
   transform: translatex(-50%);
   width: 72%;
-  height: 63vw;
+  height: 65vw;
 }
 main article:nth-of-type(4) div a {
   display: block;

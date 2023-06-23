@@ -55,3 +55,14 @@ main{
     0%{transform:scale(0)}
 100%{transform:scale(1)}
 }
+
+footer{
+    >div:nth-of-type(1){
+            animation: footup 1s infinite;
+    }
+}
+
+@keyframes footup{
+    0%,50%{transform: translateY(-80%);}
+    51%,100%{transform: translateY(-60%);}    
+}
