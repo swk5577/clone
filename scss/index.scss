@@ -3,6 +3,53 @@
 @import "_anima";
 
 
+.backic {
+    width: 100%;
+
+    img {
+        position: absolute;
+
+        &:hover {
+            transform: rotate(40deg);
+        }
+
+        &:nth-of-type(1) {
+            top: 2vw;
+            left: 20vw;
+        }
+
+        &:nth-of-type(2) {
+            top: 25vw;
+            right: 2vw
+        }
+
+        &:nth-of-type(3) {
+            top: 40vw;
+            left: 5vw
+        }
+
+        &:nth-of-type(4) {
+            top: 105vw;
+            right: 5vw;
+        }
+
+        &:nth-of-type(5) {
+            top: 260vw;
+            left: -7vw;
+        }
+
+    }
+
+}
+
+.maxb {
+    position: absolute;
+    top: 315vw;
+    left: 15vw;
+    width: 10%;
+}
+
+
 
 .bt {
     @include flex();
@@ -43,38 +90,48 @@ header {
     width: 100%;
     height: 8vw;
     padding: 0 3%;
-    
+
     img {
         width: 12vw;
         object-fit: contain;
         transition: 0.5s;
     }
+
     nav {
         z-index: 5;
-        >ul {display: flex;
-            li {width: 150%;
-                position: relative;
-                &:hover:nth-of-type(1) .n_bradns{
-                    opacity: 100%;
-                }
-                &:hover:nth-of-type(2) .n_outdoor{
-                    opacity: 100%;
-                }
-                &:hover:nth-of-type(3) .n_indoor{
-                    opacity: 100%;
-                }
-                >a{
-                padding: 0 1.5vw;
-                line-height: 2.3vw;
-                display: inline;
-                font-size: 1.2vw;
-                font-weight: bolder;
-                transition: 0.5s;
-                color: black;
 
-                &:nth-of-type(1):hover .n_bradns {
-                    opacity: 100%;
-                }}
+        >ul {
+            display: flex;
+
+            li {
+                width: 150%;
+                position: relative;
+
+                &:hover:nth-of-type(1) .n_bradns {
+                    display: block;
+                }
+
+                &:hover:nth-of-type(2) .n_outdoor {
+                    display: block;
+                }
+
+                &:hover:nth-of-type(3) .n_indoor {
+                    display: block;
+                }
+
+                >a {
+                    padding: 0 1.5vw;
+                    line-height: 2.3vw;
+                    display: inline;
+                    font-size: 1.2vw;
+                    font-weight: bolder;
+                    transition: 0.5s;
+                    color: black;
+
+                    &:nth-of-type(1):hover .n_bradns {
+                        opacity: 100%;
+                    }
+                }
             }
 
         }
@@ -84,13 +141,15 @@ header {
     .n_outdoor,
     .n_indoor {
         position: absolute;
-        top: 2vw; left: 0;
+        top: 2vw;
+        left: 0;
         background-color: black;
         font-weight: bold;
         padding: 0.8vw 0;
-        opacity: 0;
+        display: none;
         width: 100%;
-        a{
+
+        a {
             color: white;
             font-size: 0.9vw;
         }
@@ -106,6 +165,7 @@ main {
     @include flex();
 
     article {
+        margin-bottom: 10vw;
         /* all */
         width: 80%;
         white-space: pre-line;
@@ -167,189 +227,247 @@ main {
 
 
     >article:nth-of-type(2) {
-        margin-bottom: 10vw;
-        video{
-            margin: 5vw 0;
+        gap: 10vw;
+
+        video {
+            margin: 10vw 0 6vw;
         }
-        div{
+
+        div {
             display: flex;
 
-        
-        figcaption {
-            p {
-                margin: 1vw 0 0.5vw;
-            }
-        }
-    }
-    }
-
-
-    >article:nth-of-type(3) {
-        width: 100%;
-        overflow: hidden;
-        div {
-            div {
-                @include flex(flex-start, flex-start);
-                gap: 3vw;
-                margin-left: 10vw;
-
-                a {
-                    color: black;
-
-                    >figure {
-                        position: relative;
-                        top: 0;
-                        left: 0;
-                        @include flex (flex-start, flex-start);
-
-                        img {
-                            width: 23vw;
-                            transition: 0.7s;
-                        }
-
-                        img:nth-of-type(1) {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                        }
-
-                        img:nth-of-type(1):hover {
-                            opacity: 0;
-                        }
-
-                        figcaption {
-                            text-align: left;
-                            font-size: 0.9vw;
-
-                        }
+            &:nth-of-type(2){
+                position: relative;
+                img{
+                    position: absolute;
+                    &:nth-of-type(1){
+                        width: 7%;
+                        top:0; left: 50vw;
+                    }
+                    &:nth-of-type(2){
+                        width: 7%;
+                        top: 5vw; left: 5vw;
+                    }
+                    &:nth-of-type(3){
+                        width: 23%;
+                        top: 3vw; right: 18vw;
+                    }
+                    &:nth-of-type(4){
+                        width: 9%;
+                        top:5vw; right: 8vw;
+                    }
+                    &:nth-of-type(5){
+                        width: 7%;
+                        top: 30vw; right: -2.5vw;
+                        z-index: -1;
+                    }
+                    &:nth-of-type(6){
+                        width: 7%;
+                        bottom: 0; right: 20vw;
                     }
                 }
             }
 
-            button {
-                font-family: "material symbols outlined";
-                font-size: 6vw;
-                background-color: #f0ede6;
-
-                &:nth-of-type(1):before {
-                    content: 'arrow_left_alt';
+            &:nth-of-type(3) {
+                img {
+                    order: 2;
                 }
+            }
 
-                &:nth-of-type(2):after {
-                    content: 'arrow_right_alt';
+            figcaption {
+                p {
+                    margin: 1vw 0 0.5vw;
+                }
+            }
+
+            &:nth-of-type(5) {
+                >img {
+                    &:nth-of-type(2) {
+                        width: 30%;
+                        position: absolute;
+                        top:335vw; right: -10vw;
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 10%;
+                        position: absolute;
+                        top:355vw; right: 18vw;
+                    }
                 }
             }
         }
-
     }
 
 
-    hr {
-        width: 100%;
-        border-top: 0.1vw solid black;
-    }
+        >article:nth-of-type(3) {
+            width: 100%;
+            overflow: hidden;
 
-    .tr {
-        width: 100%;
-        overflow: hidden;
+            div {
+                div {
+                    @include flex(flex-start, flex-start);
+                    gap: 3vw;
+                    margin-left: 10vw;
 
-        p {
-            font-size: 7vw;
-            font-weight: bold;
-            font-family: 'Libre Baskerville', serif;
-            white-space: nowrap;
-            white-space: pre;
-            padding: 2vw 0;
+                    a {
+                        color: black;
+
+                        >figure {
+                            position: relative;
+                            top: 0;
+                            left: 0;
+                            @include flex (flex-start, flex-start);
+
+                            img {
+                                width: 23vw;
+                                transition: 0.7s;
+
+                            }
+
+                            img:nth-of-type(1) {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                            }
+
+                            img:nth-of-type(1):hover {
+                                opacity: 0;
+                            }
+
+                            figcaption {
+                                text-align: left;
+                                font-size: 0.9vw;
+
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    font-family: "material symbols outlined";
+                    font-size: 6vw;
+                    background-color: #f0ede6;
+
+                    &:nth-of-type(1):before {
+                        content: 'arrow_left_alt';
+                    }
+
+                    &:nth-of-type(2):after {
+                        content: 'arrow_right_alt';
+                    }
+                }
+            }
+
         }
-    }
 
 
-    article:nth-of-type(4) {
+        hr {
+            width: 100%;
+            border-top: 0.1vw solid black;
+        }
 
-        div {
-            display: block;
-            position: relative;
-            top: 0;
-            left: 50%;
-            transform: translatex(-50%);
-            width: 72%;
-            height: 63vw;
+        .tr {
+            width: 100%;
+            overflow: hidden;
 
-            a {
+            p {
+                font-size: 7vw;
+                font-weight: bold;
+                font-family: 'Libre Baskerville', serif;
+                white-space: nowrap;
+                white-space: pre;
+                padding: 2vw 0;
+            }
+        }
+
+
+        article:nth-of-type(4) {
+
+            div {
                 display: block;
-                position: absolute;
-                color: black;
+                position: relative;
+                top: 0;
+                left: 50%;
+                transform: translatex(-50%);
+                width: 72%;
+                height: 63vw;
 
-                figure {
-                    @include flex(normal, flex-start);
-                    width: 25vw;
+                a {
+                    display: block;
+                    position: absolute;
+                    color: black;
+
+                    figure {
+                        @include flex(normal, flex-start);
+                        width: 25vw;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        >figcaption {
+                            text-align: left;
+
+                            b {
+                                font-family: 'Noto Sans KR', sans-serif;
+                                font-size: 1.3vw;
+                            }
+                        }
+                    }
+                }
+
+                >a:nth-of-type(1) {
+                    top: 0;
+                    left: 0;
+                }
+
+                >a:nth-of-type(2) {
+                    top: 10vw;
+                    right: 0;
+                }
+
+                >a:nth-of-type(3) {
+                    bottom: 0;
+                    left: 0;
+                }
+
+            }
+
+            .bt>p::before {
+                font-family: "material symbols outlined";
+                content: 'add';
+                font-size: 1.5vw;
+                margin-right: 0.5vw;
+            }
+        }
+
+
+        article:nth-of-type(5) {
+            margin-top: 3vw;
+
+            h2 {
+                font-size: 3.5vw
+            }
+
+            div {
+                @include flex(space-between);
+
+                a {
+                    @include flex();
+                    width: 23%;
+                    height: 18vw;
+                    overflow: hidden;
 
                     img {
                         width: 100%;
-                    }
-
-                    >figcaption {
-                        text-align: left;
-
-                        b {
-                            font-family: 'Noto Sans KR', sans-serif;
-                            font-size: 1.3vw;
-                        }
+                        object-fit: cover;
                     }
                 }
             }
-
-            >a:nth-of-type(1) {
-                top: 0;
-                left: 0;
-            }
-
-            >a:nth-of-type(2) {
-                top: 10vw;
-                right: 0;
-            }
-
-            >a:nth-of-type(3) {
-                bottom: 0;
-                left: 0;
-            }
-
         }
 
-        .bt>p::before {
-            font-family: "material symbols outlined";
-            content: 'add';
-            font-size: 1.5vw;
-            margin-right: 0.5vw;
-        }
     }
 
-
-    article:nth-of-type(5) {
-        margin-top: 3vw;
-
-        h2 {
-            font-size: 3.5vw
-        }
-
-        div {
-            @include flex(space-between);
-
-            a {
-                @include flex();
-                width: 23%;
-                height: 18vw;
-                overflow: hidden;
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
-    }
-
-}
 
 footer {
     background-color: black;
