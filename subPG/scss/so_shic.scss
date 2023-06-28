@@ -1,0 +1,33 @@
+@import "../../scss/reset";
+@import "../../scss/mixin";
+
+.fig{
+    @include flex ();
+}
+button {
+    font-family: "material symbols outlined";
+    font-size: 6vw;
+    background-color: #f0ede6;
+
+    &:nth-of-type(1):before {
+        content: 'arrow_left_alt';
+    }
+
+    &:nth-of-type(2):after {
+        content: 'arrow_right_alt';
+    }
+}
+
+main{}
+
+footer{
+    position: relative;
+    a{
+        position: absolute;
+        top:40%; left:50%;
+        transform: translate(-50%);
+        color: white;
+        b{font-size: 8vw;}
+        p{}
+    }
+}

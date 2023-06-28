@@ -1,20 +1,12 @@
 
 main{
-    article:nth-of-type(1){
-        figure{
-            img{
-                animation: tun 1s forwards;
-            }
-        }
-    }   
+    .tun{
+        animation: tun 1s forwards;
+    }
     
-
-    article:nth-of-type(3){
-        div{
+        .in{
             animation: in 1s forwards;
         }
-    }
-
 
     .tr{p{animation: tr 15s infinite linear;}}
 }

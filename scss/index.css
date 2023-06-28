@@ -27,7 +27,7 @@ a {
 
 img {
   /* 폰트와 이미지 겹칠때 아래에 빈공간 생기는거 삭제 */
-  vertical-align: top;
+  vertical-align: center;
 }
 
 figure {
