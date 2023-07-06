@@ -474,292 +474,225 @@ header .mo_sub a {
     margin-left: 10vw;
   }
 }
-.backic {
-  width: 100%;
-  z-index: -5;
-}
-.backic > img {
-  position: absolute;
-  width: 10%;
-}
-.backic > img:hover {
-  transform: rotate(40deg);
-}
-.backic > img:nth-of-type(1) {
-  z-index: 3;
-  top: 2vw;
-  left: 20vw;
-}
-.backic > img:nth-of-type(2) {
-  top: 25vw;
-  right: 2vw;
-}
-.backic > img:nth-of-type(3) {
-  top: 40vw;
-  left: 5vw;
-}
-.backic > img:nth-of-type(4) {
-  top: 105vw;
-  right: 5vw;
-}
-.backic > img:nth-of-type(5) {
-  top: 260vw;
-  left: -7vw;
-  width: 30%;
-}
-
 main {
-  position: relative;
-  overflow: hidden;
   margin: 0 auto;
-  width: 100%;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* article */
 }
 main article {
-  margin-bottom: 10vw;
-  /* all */
-  width: 80%;
-  white-space: pre-line;
+  /* a3 */
+}
+main article:nth-of-type(1) > h2 {
+  font-size: 4vw;
   text-align: center;
+  margin: 5vw;
 }
-main article h2 {
-  font-size: 4.5vw;
+main article:nth-of-type(1) > div {
+  position: relative;
+  width: 95%;
+  margin: 0 auto;
 }
-main article div img {
-  width: 50%;
-}
-main article div figure {
-  margin-top: 10vw;
-  flex-grow: 1;
+main article:nth-of-type(1) > div:nth-of-type(1) {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  gap: 5vw;
+  width: 90%;
+}
+main article:nth-of-type(1) > div:nth-of-type(1) .r {
   flex-direction: column;
 }
-main article div figure figcaption {
-  font-size: 1vw;
-  font-weight: 600;
+main article:nth-of-type(1) > div:nth-of-type(1) figure img {
+  width: 90%;
 }
-main > article:nth-of-type(1) h2 {
-  width: 100%;
-  font-size: 7vw;
-  margin: 0;
-  position: absolute;
-  top: 4vw;
-  left: 50%;
-  transform: translatex(-50%);
-  z-index: 2;
-}
-main > article:nth-of-type(1) figure {
-  margin-top: 15vw;
-}
-main > article:nth-of-type(1) figure img {
-  width: 70%;
-}
-main > article:nth-of-type(1) figure figcaption p {
-  font-weight: 600;
-  font-size: 1vw;
-  margin: 3vw 0 2vw;
-}
-main > article:nth-of-type(2) {
-  gap: 10vw;
-}
-main > article:nth-of-type(2) video {
-  margin: 10vw auto 6vw;
-}
-main > article:nth-of-type(2) > div {
-  display: flex;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) {
-  position: relative;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(1) {
-  width: 7%;
-  top: 0;
-  left: 50vw;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(2) {
-  width: 7%;
-  top: 5vw;
-  left: 5vw;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(3) {
-  width: 23%;
-  top: 3vw;
-  right: 18vw;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(4) {
-  width: 9%;
-  top: 5vw;
-  right: 8vw;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(5) {
-  width: 7%;
-  top: 30vw;
-  right: -2.5vw;
-  z-index: -1;
-}
-main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(6) {
-  width: 7%;
-  bottom: 0;
-  right: 20vw;
-}
-main > article:nth-of-type(2) > div figcaption p {
-  margin: 1vw 0 0.5vw;
-}
-main > article:nth-of-type(2) > div:nth-of-type(4) {
-  position: relative;
-}
-main > article:nth-of-type(2) > div:nth-of-type(4) .maxb {
-  display: flex;
-  position: absolute;
-  top: 30vw;
-  left: 7vw;
-  width: 10%;
-}
-main > article:nth-of-type(2) > div:nth-of-type(5) {
-  position: relative;
-}
-main > article:nth-of-type(2) > div:nth-of-type(5) .hand {
-  width: 0;
-}
-main > article:nth-of-type(2) > div:nth-of-type(5) .hand img:nth-of-type(1) {
-  width: 30%;
-  position: absolute;
-  top: -10vw;
-  right: -17vw;
-}
-main > article:nth-of-type(2) > div:nth-of-type(5) .hand img:nth-of-type(2) {
-  width: 10%;
-  position: absolute;
-  top: 5vw;
-  right: 3vw;
-}
-main > article:nth-of-type(3) {
-  width: 100%;
-  overflow: hidden;
-}
-main > article:nth-of-type(3) div div a {
-  width: 28%;
-}
-main > article:nth-of-type(3) div div a figure figcaption {
-  text-align: left;
-  font-size: 0.9vw;
-}
-main > article:nth-of-type(3) div button {
-  font-family: "material symbols outlined";
-  font-size: 6vw;
-  background-color: #f0ede6;
-}
-main > article:nth-of-type(3) div button:nth-of-type(1):before {
-  content: "arrow_left_alt";
-}
-main > article:nth-of-type(3) div button:nth-of-type(2):after {
-  content: "arrow_right_alt";
-}
-main hr {
-  width: 100%;
-  border-top: 0.1vw solid black;
-}
-main .tr {
-  width: 100%;
-  overflow: hidden;
-}
-main .tr p {
-  font-size: 7vw;
-  font-weight: bold;
-  font-family: "Libre Baskerville", serif;
-  white-space: nowrap;
-  white-space: pre;
-  padding: 2vw 0;
-}
-main article:nth-of-type(4) {
-  margin-top: 5vw;
-}
-main article:nth-of-type(4) div {
-  display: block;
-  position: relative;
-  margin-top: 3vw;
-  top: 0;
-  left: 50%;
-  transform: translatex(-50%);
-  width: 80%;
-  height: 90vw;
-}
-main article:nth-of-type(4) div a {
-  width: 48%;
-  display: block;
-  position: absolute;
-  color: black;
-}
-main article:nth-of-type(4) div a figure {
-  margin-top: 0;
-  display: flex;
-  justify-content: normal;
-  align-items: flex-start;
-  width: 100%;
-}
-main article:nth-of-type(4) div a figure img {
-  width: 100%;
-}
-main article:nth-of-type(4) div a figure > figcaption {
-  text-align: left;
-}
-main article:nth-of-type(4) div a figure > figcaption b {
-  font-family: "Noto Sans KR", sans-serif;
+main article:nth-of-type(1) > div:nth-of-type(1) figcaption b {
   font-size: 1.3vw;
 }
-main article:nth-of-type(4) div > a:nth-of-type(1) {
-  top: 0;
-  left: 0;
+main article:nth-of-type(1) > div:nth-of-type(1) figcaption p {
+  font-size: 0.9vw;
 }
-main article:nth-of-type(4) div > a:nth-of-type(2) {
-  top: 30%;
-  right: 0;
-  margin: 0;
+main article:nth-of-type(1) > div:nth-of-type(1) div:nth-of-type(1) figcaption {
+  padding-bottom: 20vw;
+  margin-top: 10vw;
 }
-main article:nth-of-type(4) div > a:nth-of-type(3) {
-  bottom: 0;
-  left: 0;
+main article:nth-of-type(1) > div:nth-of-type(1) div:nth-of-type(2) figcaption {
+  padding-top: 10vw;
+  margin-bottom: 10vw;
 }
-main article:nth-of-type(4) .bt > p::before {
-  font-family: "material symbols outlined";
-  content: "add";
-  font-size: 1.5vw;
-  margin-right: 0.5vw;
-}
-main article:nth-of-type(5) {
-  margin-top: 3vw;
-}
-main article:nth-of-type(5) h2 {
-  font-size: 3.5vw;
-}
-main article:nth-of-type(5) div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-main article:nth-of-type(5) div a {
+main article:nth-of-type(1) > div:nth-of-type(2) {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 23%;
-  height: 18vw;
-  overflow: hidden;
+  text-align: center;
+  margin-top: 10vw;
 }
-main article:nth-of-type(5) div a img {
+main article:nth-of-type(1) > div:nth-of-type(2) figure img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+}
+main article:nth-of-type(1) > div:nth-of-type(2) b {
+  display: inline-block;
+  font-size: 2.3vw;
+  padding: 5vw 0 2vw;
+}
+main article:nth-of-type(1) > div:nth-of-type(2) p {
+  font-size: 1.1vw;
+  font-weight: 600;
+}
+main article:nth-of-type(1) .backimg img:nth-of-type(1) {
+  top: 26vw;
+  left: 10vw;
+  width: 10%;
+}
+main article:nth-of-type(1) .backimg img:nth-of-type(2) {
+  top: 34vw;
+  right: 30vw;
+  width: 5%;
+}
+main article:nth-of-type(1) .backimg img:nth-of-type(3) {
+  top: 36vw;
+  right: 15vw;
+  width: 10%;
+}
+main article:nth-of-type(1) .backimg img:nth-of-type(4) {
+  top: 70vw;
+  right: 5vw;
+  width: 5%;
+}
+main article:nth-of-type(1) .backimg img:nth-of-type(5) {
+  top: 75vw;
+  left: 8vw;
+  width: 10%;
+}
+main article:nth-of-type(2) {
+  text-align: center;
+  margin-top: 13vw;
+}
+main article:nth-of-type(2) img {
+  width: 55%;
+  margin: 7vw 0 20vw;
+}
+main article:nth-of-type(2) h2 {
+  font-size: 7vw;
+}
+main article:nth-of-type(3) {
+  text-align: center;
+  position: relative;
+}
+main article:nth-of-type(3) .backimg > img:nth-of-type(1) {
+  width: 10%;
+  top: -8vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main article:nth-of-type(3) .backimg > img:nth-of-type(2) {
+  top: -8vw;
+  left: -10%;
+  width: 40%;
+}
+main article:nth-of-type(3) h2 {
+  font-size: 5vw;
+}
+main article:nth-of-type(3) b {
+  font-size: 2vw;
+}
+main article:nth-of-type(3) div:nth-of-type(2) ul {
+  margin: 3vw 0;
+}
+main article:nth-of-type(3) div:nth-of-type(2) ul li {
+  font-family: "Noto Sans KR";
+  font-weight: bolder;
+  font-size: 1.5vw;
+}
+main article:nth-of-type(3) div:nth-of-type(2) ul li b {
+  display: block;
+  font-size: 2vw;
+  padding: 1vw 0;
+}
+main article:nth-of-type(3) div:nth-of-type(2) ul li p {
+  padding: 1vw 0;
+}
+main article:nth-of-type(3) div:nth-of-type(2) ul li::after {
+  content: "";
+  display: block;
+  width: 28%;
+  margin: 0 auto;
+  height: 1vw;
+  background: url(../../img/cotie-profile-line.jpg) no-repeat center center;
+}
+main article:nth-of-type(3) div:nth-of-type(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10vw 0 25vw;
+}
+main article:nth-of-type(3) div:nth-of-type(3) img {
+  width: 28%;
+}
+main article:nth-of-type(3) div:nth-of-type(3) img:nth-of-type(1) {
+  z-index: -1;
+}
+main article:nth-of-type(4) {
+  position: relative;
+  text-align: center;
+}
+main article:nth-of-type(4) h2 {
+  font-size: 5vw;
+}
+main article:nth-of-type(4) .backimg img {
+  width: 10%;
+  top: -8vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main article:nth-of-type(4) > img {
+  max-width: 90%;
+}
+main article:nth-of-type(4) > div {
+  max-width: 80%;
+  margin: 4vw auto 5vw;
+  gap: 10vw;
+  text-align: start;
+  display: flex;
+  justify-content: flex-start;
+  align-items: normal;
+}
+main article:nth-of-type(4) > div div > b {
+  display: block;
+  font-size: 1.8vw;
+  font-weight: bold;
+  margin-bottom: 2vw;
+}
+main article:nth-of-type(4) > div div li {
+  padding-left: 1vw;
+  position: relative;
+  font-family: "Noto Sans KR";
+  margin-bottom: 1.2vw;
+}
+main article:nth-of-type(4) > div div li::before {
+  content: "";
+  position: absolute;
+  top: 1vw;
+  left: -0.3vw;
+  width: 0.4vw;
+  height: 0.3vw;
+  background-color: black;
+}
+main article:nth-of-type(4) > div div li b {
+  font-size: 1.3vw;
+}
+main article:nth-of-type(4) > div div li p {
+  font-size: 1.1vw;
+  font-weight: 500;
+  padding: 0.3vw;
+}
+main article:nth-of-type(4) .bt p {
+  background-image: url(../img/button.png);
 }
 
+/* main */
 footer {
   background-color: black;
   width: 100%;
-  margin-top: 10vw;
+  margin-top: 20vw;
   position: relative;
 }
 footer > div:nth-of-type(1) {
@@ -767,7 +700,7 @@ footer > div:nth-of-type(1) {
   width: 100%;
   overflow: hidden;
   position: absolute;
-  transform: translateY(-80%);
+  transform: translateY(-60%);
 }
 footer > div:nth-of-type(1) img {
   width: 120%;

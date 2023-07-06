@@ -14,20 +14,20 @@
 
 <body id="home">
     <header>
-        <a href="#home"><img src="./img/hoem.png" alt=""></a>
-        <nav>
+        <a href="./index.html"><img src="./img/hoem.png" alt=""></a>
+        <nav class="nav_pc">
             <ul>
                 <li>
-                    <a href="#">Bradns</a>
+                    <a href="./subPG/brands/li-1.html">Bradns</a>
                     <ul class="n_bradns">
-                        <li><a href="">펫 소 시크</a></li>
-                        <li><a href="">맥스본</a></li>
-                        <li><a href="">밀크 앤 페퍼</a></li>
+                        <li><a href="./subPG/brands/li-1.html">펫 소 시크</a></li>
+                        <li><a href="./subPG/brands/li-2.html">맥스본</a></li>
+                        <li><a href="./subPG/brands/li-3.html">밀크 앤 페퍼</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a href="#">Outdoor</a>
+                    <a href="./subPG/outdoor/li-1.html">Outdoor</a>
                     <ul class="n_outdoor">
                         <li><a href="">봄여름의류</a></li>
                         <li><a href="">가을겨울의류</a></li>
@@ -39,16 +39,27 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Indoor</a>
+                    <a href="./subPG/indoor/li-1.html">Indoor</a>
                     <ul class="n_indoor">
                         <li><a href="">리빙</a></li>
                         <li><a href="">장난감</a></li>
                         <li><a href="">고양이</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Cotielog</a></li>
-                <li><a href="#">Store</a></li>
+                <li><a href="./subPG/cotielog/">Cotielog</a></li>
+                <li><a href="./subPG/store/">Store</a></li>
             </ul>
+        </nav>
+
+        <nav class="nav_no">
+                <p class="menu"></p>
+                <div class="mo_sub on">
+                    <a href="./subPG/brands/li-1.html">Bradns</a>
+                    <a href="./subPG/outdoor/li-1.html">Outdoor</a>
+                    <a href="./subPG/indoor/li-1.html">Indoor</a>
+                    <a href="./subPG/cotielog/#">Cotielog</a>
+                    <a href="./subPG/store/#">Store</a>
+                </div>
         </nav>
     </header>
     <div class="backic">
@@ -65,7 +76,7 @@
         <article class="m1"> <!-- 1 -->
             <h2>Every Pet Deserves
                 The Best</h2>
-            <figure>
+            <figure class="figup">
                 <img class="tun" src="./img/main-visual-00.gif" alt="">
                 <figcaption>
                     <p>가치있는 우리는 사랑받기 충분합니다.
@@ -80,7 +91,7 @@
 
         <article class="m2"><!-- 2 -->
             <h2>Brands</h2> <!-- b1 -->
-            <div>
+            <div class="figup">
                 <img src="./img/brand-petsoshic.gif" alt="">
 
                 <figure>
@@ -100,19 +111,21 @@
                 </figure>
             </div>
 
-            <div class="backimg"><!-- d2 -->
+            <div ><!-- d2 -->
+                <div class="backimg">
                 <img src="./img/pattern-grass-01.jpg" alt="">
                 <img src="./img/pattern-grass-05.jpg" alt="">
                 <img src="./img/pattern-footprint.png" alt="">
                 <img src="./img/pattern-grass-02.jpg" alt="">
                 <img src="./img/pattern-grass-05.jpg" alt="">
                 <img src="./img/pattern-grass-04.jpg" alt="">
-            <video width=100% max-height="940px" loop autoplay  src="./vdo/2735664736.mp4"></video>
+            </div>
+            <video class="video" width=100% max-height="940px" loop muted autoplay  src="./vdo/2735664736.mp4"></video>
         </div>
             
 
 
-            <div class="r"><!-- b3 -->
+            <div class="figup r"><!-- b3 -->
                 <img src="./img/brand-maxbone.gif" alt="">
 
                 <figure>
@@ -133,18 +146,25 @@
             </div>
 
 
-            <div class="maxb"> <!-- b4 -->
+            <div> <!-- b4 -->
+                <div class="maxb">
                 <img src="./img/layer-maxbone.jpg" alt="">
                 <img src="./img/layer-maxbone.jpg" alt="">
                 <img src="./img/layer-maxbone.jpg" alt="">
+                </div>
+
+                <video class="video v2" width=50% max-height="940px" loop muted autoplay  src="./vdo/2785637286.mp4"></video>
             </div>
 
-            <video width=50% max-height="940px" loop autoplay  src="./vdo/2785637286.mp4"></video>
 
-            <div><!-- b5 -->
+
+            <div class="figup"><!-- b5 -->
                 <img src="./img/brand-milkpepper.jpg" alt="">
-                <img src="./img/layer-hand.png" alt="">
-                <img src="./img/layer-heart.png" alt="">
+                <div class="hand">
+                    <img src="./img/layer-hand.png" alt="">
+                    <img src="./img/layer-heart.png" alt="">
+                </div>
+                
 
                 <figure>
                     <img src="./img/logo-milkpepper.svg" alt="">
@@ -266,9 +286,9 @@
 
         <article class="m4"><!-- 4 -->
             <h2>Cotielog</h2>
-            <div>
+            <div class="ivt">
                 <a href="">
-                    <figure><!-- C1 -->
+                    <figure  ><!-- C1 -->
                         <img src="./img/4월리뷰_홈페이지용.jpg" alt="">
                         <figcaption>
                             <b>2022.04 우수 리뷰 고객 캐리커쳐</b>
@@ -277,7 +297,7 @@
                 </a>
 
                 <a href="">
-                    <figure><!-- C2 -->
+                    <figure ><!-- C2 -->
                         <img src="./img/cotielog-02.jpg" alt="">
                         <figcaption>
                             <b>오프라인 입점 매장 안내</b>
@@ -286,7 +306,7 @@
                 </a>
 
                 <a href="">
-                    <figure><!-- C3 -->
+                    <figure ><!-- C3 -->
                         <img src="./img/GDWEB.png" alt="">
                         <figcaption>
                             <b>2021 GDWEB 디자인 어워즈 GRAND PRIZE  수상</b>
@@ -301,7 +321,7 @@
 
 
         <article class="m5"><!-- 5 -->
-            <h2>Instagram@cotie_shop</h2>
+            <h2>Instagram<br>@cotie_shop</h2>
             <div>
                 <a href=""><img src="./img/17992122892877584.heic" alt=""></a>
                 <a href=""><img src="./img/18342450769004510.jpg" alt=""></a>
@@ -320,8 +340,8 @@
 
 
     <footer>
-        <div><!-- d1 -->
-            <img src="./img/footer-layer.svg" alt="">
+        <div ><!-- d1 -->
+            <img class="footan" src="./img/footer-layer.svg" alt="">
         </div>
         <div><!-- d2 -->
             <div>

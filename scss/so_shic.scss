@@ -1,0 +1,218 @@
+@import "_reset";
+@import "_mixin";
+@import "_midia";
+
+button {
+    font-family: "material symbols outlined";
+    font-size: 6vw;
+    background-color: #f0ede6;
+
+    &:nth-of-type(1):before {
+        content: 'arrow_left_alt';
+    }
+
+    &:nth-of-type(2):after {
+        content: 'arrow_right_alt';
+    }
+}
+
+
+main{
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    background-color: #f0ede6;
+    article{
+        
+        &:nth-of-type(1){
+            overflow: hidden;
+            text-align: center;
+            h2{
+                font-size: 7vw;
+                padding-bottom: 2vw;
+            }
+            >div{
+                &:nth-of-type(1){
+                    margin-bottom: 13vw;
+                    position: relative;
+                    .backimg >img{
+                        
+                        &:nth-of-type(1){
+                            width: 20%;
+                            top:0; left:3vw;
+                        }
+
+                        &:nth-of-type(2){
+                            width: 50%;
+                            bottom: -15vw;
+                            }
+                    }
+                }
+
+
+                &:nth-of-type(2){
+                    margin:0 auto;
+                    width: 80%;
+                    @include flex(space-between);
+                    
+                    img{width: 50%;}
+                    
+                    figcaption{
+                    b{display: block;
+                        font-size: 1.5vw;
+                        margin: 2vw 0 2vw;
+                    }
+                    p{font-size: 0.9vw;
+                        line-height: 2;
+                        font-weight: 600;
+                    }}
+
+                }
+
+
+                &:nth-of-type(3){
+                    .backimg{
+                        position: relative;
+                        img{
+                            &:nth-of-type(1){
+                                width: 6%;
+                                top:-10vw; right: 30vw;
+                            }
+                            &:nth-of-type(2){
+                                width: 5%;
+                                top: -5vw; left: 20vw;
+                            }
+                            &:nth-of-type(3){
+                                width: 7%;
+                                top: -5vw; right: 18vw;
+                            }
+                            &:nth-of-type(4){
+                                width: 7%;
+                                top:7vw; right: 5vw;
+                            }
+                            &:nth-of-type(5){
+                                width: 7%;
+                                bottom:-8vw; right: 25vw;
+                            }
+                        }
+                    }
+                }
+
+
+                &:nth-of-type(4){
+                    margin: 15vw auto 0;
+                    width: 80%;
+                    figure{
+                        img{width:45%;}
+                        @include flex();
+                        gap: 5vw;
+                        
+                        b{
+                            font-size: 1.5vw;
+                            margin: 2vw 0 2vw;}
+                        p{font-size: 1vw;
+                            line-height: 2;
+                            font-weight: 600;}
+                    }
+                }
+
+                &:nth-of-type(5){
+                    transform: translateY(-5%);
+                    margin: 0 auto 15vw;
+                    width: 80%;
+                        img{width:45%;}
+                        @include flex();
+                        gap: 5vw;
+                }
+            }/* div */
+            >figure{
+                margin:10vw auto 15vw;
+                width: 80%;
+                
+                @include flex(space-between);
+                text-align: start;
+                img{width: 50%;}
+
+                b{font-size: 1.5vw;
+                    margin: 2vw 0 2vw;}
+                p{font-size: 1vw;
+                    line-height: 2;
+                    font-weight: 600;}
+            }
+        }
+
+
+        &:nth-of-type(2){
+            margin-top: 10vw;
+            img{max-width:80%;}
+            text-align: center;
+            margin-bottom : 6vw;
+            h2{font-size: 5vw;}
+
+        }
+
+
+        &:nth-of-type(3){
+            margin-top: 10vw;
+            text-align: center;
+            overflow: hidden;
+            padding-bottom: 10vw;
+            h2{
+                font-size: 5vw;
+                margin-bottom: 5vw;
+            }
+            >div{width: 100%;
+                margin: 0 auto;
+                .shop{
+                    text-align: start;
+                    a{display: block;
+                        width: 28%;
+                    flex-shrink: 0;}
+                    
+                    img{width: 100%;}
+                    b{font-size: 1.3vw;
+                    margin: 1vw 0;}
+                    p{font-size: 1.1vw;
+                    font-weight: 600;}
+                }
+            }
+            >button{
+                margin: 2vw auto 0;
+            }
+            
+        }
+    }/* art */
+}/* main */
+
+body{
+    padding-bottom: 50vw;
+> div{
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;height: 50vw;
+    z-index: 1;
+    @include flex();
+    background: no-repeat url(../img/pagination-maxbone.jpg) bottom/cover;
+    
+    a{
+        
+        color: white;
+        b{font-size: 8vw;}
+        p{font-size: 1.2vw;
+            text-align: center;
+            &::after{
+                content: '';
+                display: block;
+                width: 0;
+                height: 0.2vw;
+                background-color: white;
+                margin: 0 auto;
+                transition: 0.5s;
+            }
+            
+        }
+        &:hover >p::after{
+            width: 20%;
+        }
+    }
+}
+}

@@ -1,14 +1,7 @@
 
-main{
-    .tun{
-        animation: tun 1s forwards;
-    }
-    
-        .in{
-            animation: in 1s forwards;
-        }
 
-    .tr{p{animation: tr 15s infinite linear;}}
+.tun{
+    animation: tun 1s forwards;
 }
 
 @keyframes tun{
@@ -18,14 +11,44 @@ main{
     opacity: 100%;}
 }
 
+.in{
+    animation: in 1s forwards;
+}
+
 @keyframes in{
     0%{transform: translateX(100%);}
     100%{transform: translateX(0%);}
 }
 
+
+.tr{p{animation: tr 15s infinite linear;}}
+
 @keyframes tr{
     0%{transform: translateX(0%);}
     100%{transform: translateX(-180%);}
+}
+
+
+.cotie{
+    img{
+        &:nth-of-type(1){
+            animation: cotl 0.5s forwards;
+        }
+        &:nth-of-type(3){
+            animation: cotr 0.5s forwards;
+
+        }
+    }
+}
+
+@keyframes cotl{
+    0%{transform: translateX(100%) rotate(-20deg);}
+    100%{transform: translateX(0) rotate(-20deg);}
+}
+
+@keyframes cotr{
+    0%{transform: translateX(-100%)rotate(-20deg);}
+    100%{transform: translateX(0)rotate(-20deg);}
 }
 
 
@@ -48,13 +71,23 @@ main{
 100%{transform:scale(1)}
 }
 
-footer{
-    >div:nth-of-type(1){
-            animation: footup 1s infinite;
-    }
+.footan{
+        animation: footup 1s infinite;
+
 }
 
 @keyframes footup{
-    0%,50%{transform: translateY(-80%);}
-    51%,100%{transform: translateY(-60%);}    
+    0%,50%{transform: translateY(0%);}
+    51%,100%{transform: translateY(15%);}    
+}
+
+.line{
+    &::after{
+        animation: pline 0.5s forwards;
+    }
+}
+
+@keyframes pline{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
 }

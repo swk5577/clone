@@ -22,7 +22,8 @@ h1,h2,h3,p,figure,body,video{margin: 0;}
     box-sizing: border-box;
 }
 
-p,b,h2{    white-space: pre-line; }
+p,b,h2{    display: block;
+    white-space: pre-line; }
 
 
 ul,li{
@@ -44,8 +45,8 @@ button{
 }
 
 .backimg{
-    position: relative;
     img{
+        z-index: -1;
         position: absolute;
     }
 }
@@ -60,6 +61,7 @@ button{
     @include flex(flex-start, flex-start);
     gap: 3vw;
     a {
+        flex-shrink: 0;
         color: black;
         >figure {
             position: relative;
@@ -70,6 +72,7 @@ button{
             
             >img{
                 transition: 0.7s;
+                width: 100%;
             }
             img:nth-of-type(1) {
                 position: absolute;
@@ -115,4 +118,119 @@ button{
         content: 'expand_less';
         font-family: material symbols outlined;
     }
+}
+
+
+
+
+//헤더
+
+header {
+    z-index: 5;
+    position: relative;
+    @include flex(space-between, );
+    width: 100%;
+    height: 8vw;
+    padding: 0 3%;
+    background-color: #f0ede6;
+
+    img {
+        width: 12vw;
+        object-fit: contain;
+        transition: 0.5s;
+    }
+
+    nav {
+        z-index: 5;
+
+        >ul {
+            display: flex;
+
+            li {
+                width: 150%;
+                position: relative;
+
+                &:hover:nth-of-type(1) .n_bradns {
+                    display: block;
+                }
+
+                &:hover:nth-of-type(2) .n_outdoor {
+                    display: block;
+                }
+
+                &:hover:nth-of-type(3) .n_indoor {
+                    display: block;
+                }
+
+                >a {
+                    padding: 0 1.5vw;
+                    line-height: 2;
+                    display: inline;
+                    font-size: 1.2vw;
+                    font-weight: bolder;
+                    transition: 0.5s;
+                    color: black;
+
+                    &:nth-of-type(1):hover .n_bradns {
+                        opacity: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .n_bradns,
+    .n_outdoor,
+    .n_indoor {
+        position: absolute;
+        top: 2vw;
+        left: 0;
+        background-color: black;
+        font-weight: bold;
+        padding: 0.8vw 0;
+        display: none;
+        width: 100%;
+
+        a {
+            color: white;
+            font-size: 0.9vw;
+        }
+    }
+    .nav_no{
+        >p::after{
+            font-size: 4vw;
+            font-family: "material symbols outlined";
+            content: 'menu';
+        }
+    }
+    .mo_sub{
+        z-index: 4;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: #f0ede6;
+        transform: scale(2);
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        display: none;
+        a{
+            margin-left: 4vw;
+            display: block;
+            line-height: 3;
+            font-size: 4vw;
+            font-weight: bolder;
+            color: black;}
+
+        // &.on{
+        //     display: flex;
+        //     opacity: 1;
+        //     transform: scale(1);
+        // }
+    }
+
 }
