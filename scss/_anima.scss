@@ -77,8 +77,8 @@
 }
 
 @keyframes footup{
-    0%,50%{transform: translateY(-5%);}
-    51%,100%{transform: translateY(5%);}    
+    0%,50%{transform: translateY(10%);}
+    51%,100%{transform: translateY(0);}    
 }
 
 .line{
