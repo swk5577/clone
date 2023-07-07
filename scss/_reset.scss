@@ -145,11 +145,14 @@ header {
 
     nav {
         z-index: 5;
+        height: 100%;
 
-        >ul {
+        >ul {height: 100%;
             display: flex;
 
-            li {
+            >li {
+                @include flex();
+                height: 100%;
                 width: 150%;
                 position: relative;
 
@@ -169,7 +172,7 @@ header {
                     padding: 0 1.5vw;
                     line-height: 2;
                     display: inline;
-                    font-size: 1.2vw;
+                    font-size: 1.5vw;
                     font-weight: bolder;
                     transition: 0.5s;
                     color: black;
@@ -188,18 +191,22 @@ header {
     .n_outdoor,
     .n_indoor {
         position: absolute;
-        top: 2vw;
-        left: 0;
+        top: 6vw;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: black;
         font-weight: bold;
-        padding: 0.8vw 0;
+        padding: 10% 0;
         display: none;
-        width: 100%;
-
-        a {
+        width: 120%;
+        >li{
+            padding: 5% 20%;
+            a {
             color: white;
-            font-size: 0.9vw;
+            font-size: 1.2vw;
+            } 
         }
+        
     }
     .nav_no{
         >p::after{

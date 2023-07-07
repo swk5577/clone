@@ -132,6 +132,10 @@ button {
   font-family: material symbols outlined;
 }
 
+figure {
+  word-break: keep-all;
+}
+
 header {
   z-index: 5;
   position: relative;
@@ -228,6 +232,92 @@ header .mo_sub a {
   color: black;
 }
 
+footer {
+  background-color: black;
+  width: 100%;
+  margin-top: 20vw;
+  position: relative;
+}
+footer > div:nth-of-type(1) {
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-60%);
+}
+footer > div:nth-of-type(1) img {
+  width: 120%;
+}
+footer > div:nth-of-type(2) {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10vw;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p {
+  color: white;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
+  font-size: 1vw;
+  font-weight: bold;
+  padding: 3vw 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1)::after {
+  content: "expand_more";
+  font-family: material symbols outlined;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1),
+footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(3) {
+  font-family: "Libre Baskerville", serif;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2) {
+  white-space: pre-line;
+  color: #666;
+  line-height: 1.2;
+  font-size: 0.8vw;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(3) {
+  font-size: 1.3vw;
+  padding: 4vw 0;
+  color: #666;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div {
+  width: 50%;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div > a {
+  font-size: 3vw;
+  font-weight: bold;
+  display: block;
+  padding: 1vw 0;
+  line-height: 2;
+  color: white;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > a {
+  width: 30%;
+  font-size: 1.3vw;
+  font-weight: bold;
+  padding: 0 1vw;
+  color: white;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > a img {
+  width: 100%;
+}
+
 .tun {
   animation: tun 1s forwards;
 }
@@ -314,10 +404,10 @@ header .mo_sub a {
 
 @keyframes footup {
   0%, 50% {
-    transform: translateY(0%);
+    transform: translateY(-5%);
   }
   51%, 100% {
-    transform: translateY(15%);
+    transform: translateY(5%);
   }
 }
 .line::after {
