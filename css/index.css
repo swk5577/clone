@@ -132,6 +132,10 @@ button {
   font-family: material symbols outlined;
 }
 
+figure {
+  word-break: keep-all;
+}
+
 header {
   z-index: 5;
   position: relative;
@@ -228,6 +232,92 @@ header .mo_sub a {
   color: black;
 }
 
+footer {
+  background-color: black;
+  width: 100%;
+  margin-top: 20vw;
+  position: relative;
+}
+footer > div:nth-of-type(1) {
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  transform: translateY(-60%);
+}
+footer > div:nth-of-type(1) img {
+  width: 120%;
+}
+footer > div:nth-of-type(2) {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10vw;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 100%;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p {
+  color: white;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
+  font-size: 1vw;
+  font-weight: bold;
+  padding: 3vw 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1)::after {
+  content: "expand_more";
+  font-family: material symbols outlined;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1),
+footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(3) {
+  font-family: "Libre Baskerville", serif;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2) {
+  white-space: pre-line;
+  color: #666;
+  line-height: 1.2;
+  font-size: 0.8vw;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(3) {
+  font-size: 1.3vw;
+  padding: 4vw 0;
+  color: #666;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div {
+  width: 50%;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div > a {
+  font-size: 3vw;
+  font-weight: bold;
+  display: block;
+  padding: 1vw 0;
+  line-height: 2;
+  color: white;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > a {
+  width: 30%;
+  font-size: 1.3vw;
+  font-weight: bold;
+  padding: 0 1vw;
+  color: white;
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > a img {
+  width: 100%;
+}
+
 .tun {
   animation: tun 1s forwards;
 }
@@ -314,10 +404,10 @@ header .mo_sub a {
 
 @keyframes footup {
   0%, 50% {
-    transform: translateY(0%);
+    transform: translateY(-5%);
   }
   51%, 100% {
-    transform: translateY(15%);
+    transform: translateY(5%);
   }
 }
 .line::after {
@@ -333,11 +423,20 @@ header .mo_sub a {
   }
 }
 @media (max-width: 540px) {
+  #soshic article div:nth-of-type(1) {
+    margin-bottom: 5vw;
+  }
+  h2 {
+    margin-bottom: 0;
+  }
   .ivt {
-    height: 200vw !important;
+    height: 250vw !important;
   }
   .ivt a {
     width: 70% !important;
+  }
+  .ivt a b {
+    font-size: 5vw !important;
   }
   .dil {
     display: none !important;
@@ -375,15 +474,20 @@ header .mo_sub a {
   }
   .figup > img {
     width: 100% !important;
-    margin-bottom: 10vw;
   }
   .figup figcaption b {
-    font-size: 5vw !important;
-    font-weight: 500 !important;
+    font-size: 6vw !important;
+    font-weight: 600 !important;
   }
   .figup figcaption p {
-    font-size: 3.5vw !important;
+    font-size: 4vw !important;
     font-weight: 500 !important;
+  }
+  b {
+    font-size: 6vw !important;
+  }
+  p {
+    font-size: 4vw !important;
   }
   .r > :nth-child(1) {
     order: 0;
@@ -400,7 +504,7 @@ header .mo_sub a {
   .shop {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 5vw;
     margin: 0;
     flex-wrap: wrap;
@@ -412,14 +516,32 @@ header .mo_sub a {
     width: 100%;
   }
   .shop a figure figcaption b {
-    font-size: 3vw !important;
+    font-size: 5vw !important;
   }
   .shop a figure figcaption p {
-    font-size: 2.5vw !important;
+    font-size: 4vw !important;
     font-weight: 400 !important;
   }
   .backic {
     display: none;
+  }
+  footer > div:nth-of-type(2) {
+    width: 90% !important;
+  }
+  footer > div:nth-of-type(2) nav > a .dic {
+    display: block;
+  }
+  footer > div:nth-of-type(2) nav > a p {
+    display: none;
+  }
+  footer .futa a {
+    font-size: 5vw !important;
+  }
+  .fota b {
+    font-size: 8vw !important;
+  }
+  .fota p {
+    font-size: 4vw !important;
   }
 }
 @media (min-width: 540px) and (max-width: 1024px) {
@@ -438,6 +560,15 @@ header .mo_sub a {
   header .nav_no {
     display: block;
   }
+  .hand img:nth-of-type(1) {
+    width: 60% !important;
+    right: -35vw !important;
+    top: -20vw !important;
+  }
+  .hand img:nth-of-type(2) {
+    width: 10% !important;
+    right: 1vw;
+  }
   .figup {
     width: 90% !important;
   }
@@ -452,6 +583,15 @@ header .mo_sub a {
   }
   .shop {
     margin-left: 10vw;
+  }
+  footer > div:nth-of-type(2) {
+    width: 90% !important;
+  }
+  footer > div:nth-of-type(2) nav > a .dic {
+    display: none;
+  }
+  footer > div:nth-of-type(2) nav > a p {
+    display: block;
   }
 }
 @media (min-width: 1024px) {
@@ -473,21 +613,31 @@ header .mo_sub a {
   .shop {
     margin-left: 10vw;
   }
+  footer > div:nth-of-type(2) {
+    width: 90% !important;
+  }
+  footer > div:nth-of-type(2) nav > a .dic {
+    display: none;
+  }
+  footer > div:nth-of-type(2) nav > a p {
+    display: block;
+  }
 }
 .backic {
+  position: relative;
   width: 100%;
   z-index: -5;
 }
 .backic > img {
   position: absolute;
-  width: 10%;
+  width: 12%;
 }
 .backic > img:hover {
   transform: rotate(40deg);
 }
 .backic > img:nth-of-type(1) {
   z-index: 3;
-  top: 2vw;
+  top: 0;
   left: 20vw;
 }
 .backic > img:nth-of-type(2) {
@@ -511,7 +661,7 @@ header .mo_sub a {
 main {
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 5vw auto;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -527,12 +677,12 @@ main article {
 }
 main article h2 {
   font-size: 4.5vw;
+  margin-bottom: 5vw;
 }
 main article div img {
   width: 50%;
 }
 main article div figure {
-  margin-top: 10vw;
   flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -568,7 +718,7 @@ main > article:nth-of-type(2) {
   gap: 10vw;
 }
 main > article:nth-of-type(2) video {
-  margin: 10vw auto 6vw;
+  margin: 0 auto 6vw;
 }
 main > article:nth-of-type(2) > div {
   display: flex;
@@ -607,6 +757,9 @@ main > article:nth-of-type(2) > div:nth-of-type(2) img:nth-of-type(6) {
   bottom: 0;
   right: 20vw;
 }
+main > article:nth-of-type(2) > div:nth-of-type(3) > img, main > article:nth-of-type(2) > div:nth-of-type(5) > img {
+  margin-bottom: 10vw;
+}
 main > article:nth-of-type(2) > div figcaption p {
   margin: 1vw 0 0.5vw;
 }
@@ -641,6 +794,7 @@ main > article:nth-of-type(2) > div:nth-of-type(5) .hand img:nth-of-type(2) {
 main > article:nth-of-type(3) {
   width: 100%;
   overflow: hidden;
+  white-space: inherit;
 }
 main > article:nth-of-type(3) div div a {
   width: 28%;
@@ -754,84 +908,4 @@ main article:nth-of-type(5) div a img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-footer {
-  background-color: black;
-  width: 100%;
-  margin-top: 10vw;
-  position: relative;
-}
-footer > div:nth-of-type(1) {
-  top: 0;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  transform: translateY(-80%);
-}
-footer > div:nth-of-type(1) img {
-  width: 120%;
-}
-footer > div:nth-of-type(2) {
-  width: 80%;
-  display: flex;
-  margin: 0 auto;
-  padding-top: 5vw;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) {
-  width: 50%;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) > a {
-  font-size: 3vw;
-  font-weight: bold;
-  display: block;
-  padding: 1vw 0;
-  color: white;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p {
-  color: white;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
-  font-size: 1vw;
-  font-weight: bold;
-  padding: 1vw 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1)::after {
-  content: "expand_more";
-  font-family: material symbols outlined;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1),
-footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(3) {
-  font-family: "Libre Baskerville", serif;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2) {
-  white-space: pre-line;
-  color: #666;
-  line-height: 1.2;
-  font-size: 0.8vw;
-}
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(3) {
-  font-size: 1.3vw;
-  margin: 4vw 0;
-  color: #666;
-}
-footer > div:nth-of-type(2) div:nth-of-type(2) {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  width: 50%;
-}
-footer > div:nth-of-type(2) div:nth-of-type(2) nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer > div:nth-of-type(2) div:nth-of-type(2) nav a {
-  font-size: 1.3vw;
-  font-weight: bold;
-  padding: 0 1vw;
-  color: white;
 }

@@ -4,11 +4,22 @@ $moba : '540px';
 
 //moba
 @media (max-width:$moba) {
+    #soshic{
+        article{
+            div:nth-of-type(1){
+                margin-bottom: 5vw;
+            }
+        }
+    }
+    h2{margin-bottom: 0;}
 
     .ivt{
-        height: 200vw!important;
+        height: 250vw!important;
         a{
             width: 70%!important;
+            b{
+                font-size: 5vw!important;
+            }
         }
     }
     .dil{display: none !important;}
@@ -45,15 +56,18 @@ $moba : '540px';
     }
     .figup{
         flex-direction: column;
-        >img{width: 100%!important;
-        margin-bottom: 10vw;}
+        >img{width: 100%!important;}
         figcaption{
             
-            b{font-size: 5vw !important;
-                font-weight: 500 !important;}
-            p{font-size: 3.5vw !important;
+            b{font-size: 6vw !important;
+                font-weight: 600 !important;}
+            p{font-size: 4vw !important;
                 font-weight: 500 !important;}
         }
+    }
+    b{font-size: 6vw !important;}
+    p{
+        font-size: 4vw!important;
     }
     .r{
         >:nth-child(1){
@@ -72,7 +86,7 @@ $moba : '540px';
     }
 
     .shop{ 
-        @include flex (space-between);
+        @include flex (space-between,flex-start);
         padding: 5vw;
         margin: 0;
         flex-wrap: wrap;
@@ -81,8 +95,8 @@ $moba : '540px';
             figure{
                 img{width:100%}
                 figcaption{
-                    b{font-size: 3vw!important;}
-                    p{font-size: 2.5vw!important;
+                    b{font-size: 5vw!important;}
+                    p{font-size: 4vw!important;
                     font-weight: 400!important;}
                 }
             }
@@ -92,6 +106,28 @@ $moba : '540px';
     }
     .backic{
         display: none;
+    }
+    footer{
+        >div:nth-of-type(2){
+            width: 90% !important;
+            nav{
+                >a{
+                    .dic{display: block;}
+                    p{display: none;}
+                }
+            }
+        }
+        .futa{
+            a{
+                font-size: 5vw !important;
+
+            }
+        }
+        
+    }
+    .fota{
+        b{font-size: 8vw!important;}
+        p{font-size: 4vw!important;}
     }
 }
 
@@ -120,6 +156,18 @@ $moba : '540px';
             display: block;
         }
     }
+
+    .hand{
+        img:nth-of-type(1){
+            width: 60%!important;
+            right: -35vw!important;
+            top:-20vw!important;
+        }
+        img:nth-of-type(2){
+            width: 10%!important;
+            right: 1vw;
+        }
+    }
     .figup{
         width: 90% !important;
     }
@@ -137,6 +185,17 @@ $moba : '540px';
         margin-left: 10vw;
     }
 
+    footer{
+        >div:nth-of-type(2){
+            width: 90% !important;
+            nav{
+                >a{
+                    .dic{display: none;}
+                    p{display: block;}
+                }
+            }
+        }
+    }
 }
 
 // pc
@@ -163,6 +222,17 @@ $moba : '540px';
     }
     .shop{
         margin-left: 10vw;
+    }
+    footer{
+        >div:nth-of-type(2){
+            width: 90% !important;
+            nav{
+                >a{
+                    .dic{display: none;}
+                    p{display: block;}
+                }
+            }
+        }
     }
 
 }

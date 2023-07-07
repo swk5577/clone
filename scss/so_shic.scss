@@ -45,6 +45,7 @@ main{
                         &:nth-of-type(2){
                             width: 50%;
                             bottom: -15vw;
+                            right: -10vw;
                             }
                     }
                 }
@@ -53,6 +54,7 @@ main{
                 &:nth-of-type(2){
                     margin:0 auto;
                     width: 80%;
+                    gap: 5vw;
                     @include flex(space-between);
                     
                     img{width: 50%;}
@@ -71,6 +73,7 @@ main{
 
 
                 &:nth-of-type(3){
+                    
                     .backimg{
                         position: relative;
                         img{
@@ -101,10 +104,12 @@ main{
 
                 &:nth-of-type(4){
                     margin: 15vw auto 0;
-                    width: 80%;
+                    width: 100%;
                     figure{
                         img{width:45%;}
                         @include flex();
+                        width: 80%;
+                        margin: 0 auto;
                         gap: 5vw;
                         
                         b{
@@ -118,7 +123,7 @@ main{
 
                 &:nth-of-type(5){
                     transform: translateY(-5%);
-                    margin: 0 auto 15vw;
+                    margin: 0 auto;
                     width: 80%;
                         img{width:45%;}
                         @include flex();
@@ -128,6 +133,7 @@ main{
             >figure{
                 margin:10vw auto 15vw;
                 width: 80%;
+                gap: 5vw;
                 
                 @include flex(space-between);
                 text-align: start;

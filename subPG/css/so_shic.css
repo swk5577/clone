@@ -22,6 +22,7 @@ h1, h2, h3, p, figure, body, video {
 }
 
 p, b, h2 {
+  display: block;
   white-space: pre-line;
 }
 
@@ -50,10 +51,8 @@ button {
   background-color: none;
 }
 
-.backimg {
-  position: relative;
-}
 .backimg img {
+  z-index: -1;
   position: absolute;
 }
 
@@ -71,6 +70,7 @@ button {
   gap: 3vw;
 }
 .shop a {
+  flex-shrink: 0;
   color: black;
 }
 .shop a > figure {
@@ -84,6 +84,7 @@ button {
 }
 .shop a > figure > img {
   transition: 0.7s;
+  width: 100%;
 }
 .shop a > figure img:nth-of-type(1) {
   position: absolute;
@@ -129,6 +130,102 @@ button {
   display: block;
   content: "expand_less";
   font-family: material symbols outlined;
+}
+
+header {
+  z-index: 5;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8vw;
+  padding: 0 3%;
+  background-color: #f0ede6;
+}
+header img {
+  width: 12vw;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: 0.5s;
+}
+header nav {
+  z-index: 5;
+}
+header nav > ul {
+  display: flex;
+}
+header nav > ul li {
+  width: 150%;
+  position: relative;
+}
+header nav > ul li:hover:nth-of-type(1) .n_bradns {
+  display: block;
+}
+header nav > ul li:hover:nth-of-type(2) .n_outdoor {
+  display: block;
+}
+header nav > ul li:hover:nth-of-type(3) .n_indoor {
+  display: block;
+}
+header nav > ul li > a {
+  padding: 0 1.5vw;
+  line-height: 2;
+  display: inline;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  transition: 0.5s;
+  color: black;
+}
+header nav > ul li > a:nth-of-type(1):hover .n_bradns {
+  opacity: 100%;
+}
+header .n_bradns,
+header .n_outdoor,
+header .n_indoor {
+  position: absolute;
+  top: 2vw;
+  left: 0;
+  background-color: black;
+  font-weight: bold;
+  padding: 0.8vw 0;
+  display: none;
+  width: 100%;
+}
+header .n_bradns a,
+header .n_outdoor a,
+header .n_indoor a {
+  color: white;
+  font-size: 0.9vw;
+}
+header .nav_no > p::after {
+  font-size: 4vw;
+  font-family: "material symbols outlined";
+  content: "menu";
+}
+header .mo_sub {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0ede6;
+  transform: scale(2);
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  display: none;
+}
+header .mo_sub a {
+  margin-left: 4vw;
+  display: block;
+  line-height: 3;
+  font-size: 4vw;
+  font-weight: bolder;
+  color: black;
 }
 
 .fig {

@@ -120,6 +120,9 @@ button{
     }
 }
 
+figure{
+    word-break:keep-all;
+}
 
 
 
@@ -232,5 +235,102 @@ header {
         //     transform: scale(1);
         // }
     }
+
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    margin-top: 20vw;
+    position: relative;
+
+    >div:nth-of-type(1) {
+        top: 0;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        transform: translateY(-60%);
+
+        img {
+            width: 120%;
+        }
+
+
+    }
+
+    >div:nth-of-type(2) {
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 10vw;
+
+        >div:nth-of-type(1) {
+            width: 100%;
+
+            >p {
+                color: white;
+            }
+
+            >p:nth-of-type(1) {
+                font-size: 1vw;
+                font-weight: bold;
+                padding: 3vw 0;
+                @include flex(flex-start);
+
+                &::after {
+                    content: 'expand_more';
+                    font-family: material symbols outlined;
+
+                }
+            }
+
+            p:nth-of-type(1),
+            p:nth-of-type(3) {
+                font-family: 'Libre Baskerville', serif;
+            }
+
+            >p:nth-of-type(2) {
+                white-space: pre-line;
+                color: #666;
+                line-height: 1.2;
+                font-size: 0.8vw;
+            }
+
+            >p:nth-of-type(3) {
+                font-size: 1.3vw;
+                padding: 4vw 0;
+                color: #666;
+            }
+
+            >div:nth-of-type(1){
+                @include flex(space-between,flex-start);
+                div{width: 50%;
+                    >a {
+                    font-size: 3vw;
+                    font-weight: bold;
+                    display: block;
+                    padding: 1vw 0;
+                    line-height: 2;
+                    color: white;
+                }
+                    nav{
+                        @include flex();
+        
+                        >a{width: 30%;
+                            font-size: 1.3vw;
+                            font-weight: bold;
+                            padding: 0 1vw;
+                            color: white;
+                            img{width: 100%;}
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+
 
 }
