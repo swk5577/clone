@@ -63,11 +63,16 @@ button {
   order: 2;
 }
 
+.fullshop {
+  transform: translateX(100%);
+}
+
 .shop {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 3vw;
+  transition: 1s;
 }
 .shop a {
   flex-shrink: 0;
@@ -93,6 +98,29 @@ button {
 }
 .shop a > figure img:nth-of-type(1):hover {
   opacity: 0;
+}
+
+.fullshop .sbt {
+  position: relative;
+}
+.fullshop span {
+  position: absolute;
+  top: 2vw;
+  left: 10vw;
+  font-size: 1.5vw;
+  text-align: left;
+}
+
+button {
+  font-family: "material symbols outlined";
+  font-size: 6vw;
+  background-color: #f0ede6;
+}
+button:nth-of-type(1):before {
+  content: "arrow_left_alt";
+}
+button:nth-of-type(2):after {
+  content: "arrow_right_alt";
 }
 
 .bt {
@@ -214,10 +242,23 @@ header .n_indoor > li a {
   color: white;
   font-size: 1.2vw;
 }
+header .nav_no .menu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: 5;
+}
 header .nav_no > p::after {
   font-size: 4vw;
   font-family: "material symbols outlined";
   content: "menu";
+}
+header .nav_no > p.on::after {
+  content: "close";
+}
+header .nav_no > p.on + div.mo_sub {
+  opacity: 1;
+  transform: scale(1);
 }
 header .mo_sub {
   z-index: 4;
@@ -228,7 +269,7 @@ header .mo_sub {
   height: 100%;
   background-color: #f0ede6;
   transform: scale(2);
-  transition: 0.5s;
+  transition: 1s;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,7 +280,7 @@ header .mo_sub a {
   margin-left: 4vw;
   display: block;
   line-height: 3;
-  font-size: 4vw;
+  font-size: 6vw;
   font-weight: bolder;
   color: black;
 }
@@ -416,10 +457,10 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
 
 @keyframes footup {
   0%, 50% {
-    transform: translateY(-5%);
+    transform: translateY(10%);
   }
   51%, 100% {
-    transform: translateY(5%);
+    transform: translateY(0);
   }
 }
 .line::after {
