@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/png" href="./img/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="./img/favicon-16x16.png" sizes="16x16" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script defer src ="./js/common.js"></script>
     <title>클론사이트</title>
 </head>
 
 <body id="home">
-    <header>
+<!--     <header>
         <a href="./index.html"><img src="./img/hoem.png" alt=""></a>
         <nav class="nav_pc">
             <ul>
@@ -61,7 +62,9 @@
                     <a href="./subPG/store/#">Store</a>
                 </div>
         </nav>
-    </header>
+    </header> -->
+
+
     <div class="backic">
         <img src="./img/layer-bib.png" alt="">
         <img src="./img/layer-cloud.png" alt="">
@@ -187,12 +190,14 @@
 
 
         <article class="m3"> <!-- 3 -->
+
+            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
             <h2>New</h2>
 
-            <div class="fullshop"> <!-- item+button -->
-                <div class="shop"><!-- item -->
-                    <a href="#"> <!-- n1 -->
-                        <figure>
+            <div #swiperRef="" class="fullshop swiper mySwiper"> <!-- item+button -->
+                <div class="shop swiper-wrapper"><!-- item -->
+                    <a class="swiper-slide" href="#"> <!-- n1 -->
+                        <figure >
                             <img src="./img/밀크앤페퍼_PERROQUET-앵무새-강아지-장난감_thumb1-486x608.jpg" alt="">
                             <img src="./img/밀크앤페퍼_PERROQUET-앵무새-강아지-장난감_thumb2-486x608.jpg" alt="">
             
@@ -207,8 +212,8 @@
                         </figure>
                     </a>
             
-                    <a href="#"><!-- n2 -->
-                        <figure>
+                    <a class="swiper-slide" href="#"><!-- n2 -->
+                        <figure >
                             <img src="./img/밀크앤페퍼_YAEL-Bandana-Raye-Rouge-야엘-줄무늬-반다나-레드_thumb1-486x608.jpg" alt="">
                             <img src="./img/밀크앤페퍼_YAEL-Bandana-Raye-Rouge-야엘-줄무늬-반다나-레드_thumb2-486x608.jpg" alt="">
             
@@ -223,8 +228,8 @@
                         </figure>
                     </a>
             
-                    <a href="#"><!-- n3 -->
-                        <figure>
+                    <a class="swiper-slide" href="#"><!-- n3 -->
+                        <figure >
                             <img src="./img/밀크앤페퍼_PALOMA-Palmier-Orange-Kaki-팔로마-오렌지-야자수-레인코트_thumb1-486x608.jpg" alt="">
                             <img src="./img/밀크앤페퍼_PALOMA-Palmier-Orange-Kaki-팔로마-오렌지-야자수-레인코트_thumb2-486x608.jpg" alt="">
             
@@ -240,8 +245,8 @@
                         </figure>
                     </a>
             
-                    <a href="#"><!-- n4 -->
-                        <figure>
+                    <a class="swiper-slide" href="#"><!-- n4 -->
+                        <figure >
                             <img src="./img/밀크앤페퍼_SUZANNE-Harnais-수잔-하트-하네스_thumb1-486x608.jpg" alt="">
                             <img src="./img/밀크앤페퍼_SUZANNE-Harnais-수잔-하트-하네스_thumb2-486x608.jpg" alt="">
             
@@ -256,8 +261,8 @@
                         </figure>
                     </a>
             
-                    <a href="#"><!-- n5 -->
-                        <figure>
+                    <a class="swiper-slide" href="#"><!-- n5 -->
+                        <figure >
                             <img src="./img/밀크앤페퍼_JAYDEN-Harnais-제이든-그린-야자수-하네스_thumb1-486x608.jpg" alt="">
                             <img src="./img/밀크앤페퍼_JAYDEN-Harnais-제이든-그린-야자수-하네스_thumb2-486x608.jpg" alt="">
             
@@ -273,8 +278,9 @@
                     </a>
                 </div>
                 <div class="sbt">
-                <span></span>
-                <button></button> <button></button>
+                    <button class="swiper-button-prev"></button> 
+                    <button class="swiper-button-next"></button>
+                    <span class="swiper-pagination"></span>
                 </div>
             </div>
         </article>

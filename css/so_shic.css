@@ -65,13 +65,13 @@ button {
 
 .fullshop {
   transform: translateX(100%);
+  padding-left: 10vw !important;
 }
 
 .shop {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 3vw;
   transition: 1s;
 }
 .shop a {
@@ -110,13 +110,18 @@ button {
   font-size: 1.5vw;
   text-align: left;
 }
+.fullshop span > span {
+  position: relative;
+  top: 0;
+  left: 0;
+}
 
 button {
   font-family: "material symbols outlined";
   font-size: 6vw;
   background-color: #f0ede6;
 }
-button:nth-of-type(1):before {
+button:nth-of-type(1):after {
   content: "arrow_left_alt";
 }
 button:nth-of-type(2):after {
@@ -530,9 +535,6 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
   .backimg {
     width: 40vw;
   }
-  .shop {
-    margin-left: 10vw;
-  }
   footer > div:nth-of-type(2) {
     width: 90% !important;
   }
@@ -558,9 +560,6 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
   }
   .backimg > .tower {
     display: block;
-  }
-  .shop {
-    margin-left: 10vw;
   }
   footer > div:nth-of-type(2) {
     width: 90% !important;
@@ -676,18 +675,6 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
     transform: scale(1);
   }
 }
-button {
-  font-family: "material symbols outlined";
-  font-size: 6vw;
-  background-color: #f0ede6;
-}
-button:nth-of-type(1):before {
-  content: "arrow_left_alt";
-}
-button:nth-of-type(2):after {
-  content: "arrow_right_alt";
-}
-
 main {
   position: relative;
   z-index: 2;

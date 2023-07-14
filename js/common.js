@@ -1,3 +1,6 @@
+$('body').prepend('<header></header>');
+$('header').load('./header.html a,nav');
+
 //헤더 버거버튼
 const elmomenu = document.querySelector('header .menu');
 const elmosub = document.querySelector('header .mo_sub');
@@ -41,20 +44,20 @@ const elshopbut = document.querySelectorAll('.fullshop button'),
 
 
 
-let i = 0, shopleng = shopimg.length;
+let i = 0 /* shopleng = shopimg.length;
 
 let maxsiz = shopimg[0].getBoundingClientRect().width*shopleng,
     scrin = screen.width 
 
     maxy = Math.ceil(maxsiz/scrin)
-    console.log(maxy);
+    console.log(maxy); */
 
 
     elshopbut.forEach(function(v,k){
-        shopspan.innerHTML = `<${maxy}/${i*-1}>`
-        if(i == 0){
+/*         shopspan.innerHTML = `<${maxy}/${i*-1}>` */
+/*         if(i == 0){
             elshopbut[0].style.color = `gray`
-        };
+        }; */
 
         v.onclick = function(){
             
@@ -64,9 +67,9 @@ let maxsiz = shopimg[0].getBoundingClientRect().width*shopleng,
                     if(i<0){i++;}
                 };
                 elshop.style =`transform:translateX(${i*95}%);`;
-                shopspan.innerHTML = `<${maxy}/${i*-1}>`
+                /* shopspan.innerHTML = `<${maxy}/${i*-1}>` */
 
-                if(i == 0){
+/*                 if(i == 0){
                     elshopbut[0].style.color = `gray`
                 }else{
                     elshopbut[0].style.color = `black`
@@ -75,16 +78,39 @@ let maxsiz = shopimg[0].getBoundingClientRect().width*shopleng,
                     elshopbut[1].style.color = `gray`
                 }else{
                     elshopbut[1].style.color = `black`
-                }
+                } */
         }
 
     })
 
+//샵 드레그
+/* var swiper = new Swiper('.swiper', {
+    slidesPerView: 3.5,
+    spaceBetween: 60, //gap 같은기능
+    direction: getDirection(),
+    on: {
+        resize: function () {
+        swiper.changeDirection(getDirection());
+        },
+    },
+    });
 
+    function getDirection() {
+    var windowWidth = window.innerWidth;
+    var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
 
+    return direction;
+    } */
 
-
-
-
-
-
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 60,
+        pagination: {
+            el: ".swiper-pagination",
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });

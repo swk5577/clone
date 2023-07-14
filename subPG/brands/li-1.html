@@ -143,10 +143,11 @@
 
 
         <article><!-- a3 -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
             <h2>MD's choice</h2>
-            <div class="fullshop">
-                <div class="shop">
-                    <a href="#">
+            <div #swiperRef="" class="fullshop swiper mySwiper">
+                <div class="shop swiper-wrapper">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Cat-toy토이-Beige-Mouse-쥐모양-장난감_thumb001-486x608.jpg" alt="">
                             <img src="../../img/펫소시크_Cat-toy토이-Beige-Mouse-쥐모양-장난감_thumb002-486x608.jpg" alt="">
@@ -156,7 +157,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Cat-toy토이-Brown-Mouse-쥐모양-장난감_thumb001-486x608.jpg" alt="">
                             <img src="../../img/펫소시크_Cat-toy토이-Brown-Mouse-쥐모양-장난감_thumb002-486x608.jpg" alt="">
@@ -166,7 +167,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Life-Jacket-for-dogs-Lifeguard구명조끼-Pink핑크_thumb001-486x608.jpg"
                                 alt="">
@@ -178,7 +179,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Cat-collar고양이-반다나-Fat-The-Cat_thumb001-486x608.jpg" alt="">
                             <img src="../../img/펫소시크_Cat-collar고양이-반다나-Fat-The-Cat_thumb002-486x608.jpg" alt="">
@@ -188,7 +189,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Tiny-dog-collar강아지-반다나-France-World-Cup_thumb001-486x608.jpg"
                                 alt="">
@@ -200,7 +201,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Tiny-dog-collar강아지반다나-Mimi-Mini_thumb001-486x608.jpg" alt="">
                             <img src="../../img/펫소시크_Tiny-dog-collar강아지반다나-Mimi-Mini_thumb002-486x608.jpg" alt="">
@@ -210,7 +211,7 @@
                             </figcaption>
                         </figure>
                     </a>
-                    <a href="#">
+                    <a class="swiper-slide" href="#">
                         <figure>
                             <img src="../../img/펫소시크_Tiny-dog-collar강아지반다나-Small-is-the-new-big-thing_thumb001-486x608.jpg"
                                 alt="">
@@ -224,8 +225,9 @@
                     </a>
                 </div>
                 <div class="sbt">
-                    <span></span>
-                    <button></button> <button></button>
+                    <button class="swiper-button-prev"></button> 
+                    <button class="swiper-button-next"></button>
+                    <span class="swiper-pagination"></span>
                 </div>
             </div>
 
