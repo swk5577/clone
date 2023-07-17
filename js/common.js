@@ -1,25 +1,25 @@
 $('body').prepend('<header></header>');
-$('header').load('./header.html header>a,nav','menu');
+$('header').load('./header.html header>a,nav',menu);
 
 function menu(){
    //헤더 버거버튼
-const elmomenu = document.querySelector('header .menu');
-const elmosub = document.querySelector('header .mo_sub');
+    const elmomenu = document.querySelector('header .menu');
+    const elmosub = document.querySelector('header .mo_sub');
 
-elmomenu.onclick = function () {
-    setTimeout(function () {
-        elmomenu.classList.toggle('on')
-    });
-
-    if (!elmomenu.classList.contains('on')) {
-        elmosub.style.display = "flex";
-    } else {
+    elmomenu.onclick = function () {
         setTimeout(function () {
-            elmosub.style.display = "none"
-        }, 800);
-    }
+            elmomenu.classList.toggle('on')
+        });
 
-} 
+        if (!elmomenu.classList.contains('on')) {
+            elmosub.style.display = "flex";
+        } else {
+            setTimeout(function () {
+                elmosub.style.display = "none"
+            }, 800);
+        }
+
+    } 
 }
 
 
