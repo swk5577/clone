@@ -1,7 +1,8 @@
 $('body').prepend('<header></header>');
-$('header').load('./header.html a,nav');
+$('header').load('./header.html header>a,nav','menu');
 
-//헤더 버거버튼
+function menu(){
+   //헤더 버거버튼
 const elmomenu = document.querySelector('header .menu');
 const elmosub = document.querySelector('header .mo_sub');
 
@@ -18,7 +19,9 @@ elmomenu.onclick = function () {
         }, 800);
     }
 
+} 
 }
+
 
 //샵 이미지
 
