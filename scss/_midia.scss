@@ -13,7 +13,7 @@ $moba : '540px';
     }
     h2{margin-bottom: 0;}
 
-    .ivt{
+    .evt{
         height: 250vw!important;
         a{
             width: 70%!important;
@@ -32,7 +32,10 @@ $moba : '540px';
         }
     }
     .mainimg{
-        width: 90%;
+        width: 90% !important;
+    }
+    main{
+        padding-top: 20vw;
     }
     header{
         a>img{width: 30vw;}
@@ -58,10 +61,11 @@ $moba : '540px';
         flex-direction: column;
         >img{width: 100%!important;}
         figcaption{
-            
-            b{font-size: 6vw !important;
+            b{  white-space: normal;
+                font-size: 6vw !important;
                 font-weight: 600 !important;}
-            p{font-size: 4vw !important;
+            p{  white-space: normal;
+                font-size: 4vw !important;
                 font-weight: 500 !important;}
         }
     }
@@ -129,13 +133,27 @@ $moba : '540px';
         b{font-size: 8vw!important;}
         p{font-size: 4vw!important;}
     }
-}
+    .swiper-slide{
+        margin-right: 5%!important;
+    }
+
+    .insta{
+        >div{
+            flex-wrap: wrap;
+        }
+        a{
+            margin-top: 2%;
+            width: 48% !important;
+            height: 35vw !important;
+        }
+    }
+}//moba
 
 
 // note
 @media (min-width:$moba) and (max-width:$note)
 {   
-    .ivt{
+    .evt{
         height:90vw !important;
         figure{
             width: 100% !important;
@@ -193,6 +211,10 @@ $moba : '540px';
             }
         }
     }
+
+    .fullshop{
+        padding-left: 10vw !important;
+    }
 }
 
 // pc
@@ -227,6 +249,10 @@ $moba : '540px';
                 }
             }
         }
+    }
+
+    .fullshop{
+        padding-left: 10vw !important;
     }
 
 }

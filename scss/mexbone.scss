@@ -3,6 +3,205 @@
 @import "_midia";
 @import "_anima";
 
-article:nth-of-type(1){
+img {
+    width: 100%
+}
+
+main {
     position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    background-color: #f0ede6;
+
+    article:nth-of-type(1) {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+
+        &>*{
+            margin-top: 10vw;
+        }
+        & figure:nth-of-type(1){
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 7vw;
+            padding-bottom: 2vw;
+        }
+
+
+        figure:nth-of-type(1) {
+            position: relative;
+
+            & div:nth-of-type(1) {
+                img {
+                    width: 100%;
+                }
+
+                width: 60%;
+                margin: 0 auto;
+            }
+
+            >.backimg {
+                img {
+                    &:nth-of-type(1) {
+                        top: 5%;
+                        left: 0;
+                        width: 100%;
+                    }
+
+                    &:nth-of-type(2) {
+                        top: 30%;
+                        left: 5%;
+                        width: 12%;
+                    }
+                }
+            }
+
+            >.backic {
+                img {
+                    width: 20%;
+                    bottom: -20%;
+                    right: 0;
+                }
+            }
+        }
+
+
+        .figup {
+            @include flex();
+
+            &>* {
+                flex: 1 0;
+            }
+
+            figcaption {
+                .rogo{
+                    width: 70%;
+                    margin: 0 auto;
+                }
+                padding-left: 5%;
+
+                >b{font-size: 1.5vw;
+                line-height: 2;
+                margin: 2vw 0;}
+                >p{font-size: 1.2vw;
+                    font-weight: 500;
+                    line-height: 2;}
+                
+            }
+
+        &.r figcaption
+            {   text-align: left;
+                padding-left: 0;
+                padding-right: 10%;
+            }
+        }
+
+        .video{
+            position: relative;
+            
+            .backimg >img{
+                width: 20%;
+                top: 0; right: 5%;
+            }
+            .maxb{
+                width: 5%;
+                display: flex;
+                position: absolute;
+                top: 30%;
+                left: 7vw;
+            }
+        }
+
+        .fig3 {
+            position: relative;
+            figcaption{
+                padding-bottom: 10vw;
+                flex-grow: 1.1;                
+            }
+            .backimg img{
+                width: 40%;
+                bottom:-2vw; right: 5vw;
+                }
+        }
+
+        .fig4{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            figure{
+                width: 40%;
+
+                >b{
+                    font-size: 1.5vw;
+                    text-align: left;
+                }
+
+                &:nth-of-type(2n){
+                    margin-top: 10vw;
+                }
+            }
+
+        }
+
+    }//article 1
+
+    .maxshop{
+        overflow: hidden;
+        margin-top: 10vw;
+        padding-bottom: 10vw;
+        h2{
+            margin-bottom: 5vw;
+            text-align: center;
+            font-size: 4vw;}
+
+        >b{font-size: 1.2vw;}
+        >p{font-size: 1.1vw;}
+    }
+    
+}
+
+body{
+    padding-bottom: 50vw;
+
+    >.footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50vw;
+        z-index: 1;
+        @include flex();
+        background: no-repeat url(../img/pagination-milknpepper.jpg) bottom/cover;
+
+        a {
+            color: white;
+
+            >b {
+                font-size: 8vw;
+            }
+
+            >p {
+                font-size: 1.2vw;
+                text-align: center;
+
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0.2vw;
+                    background-color: white;
+                    margin: 0 auto;
+                    transition: 0.5s;
+                }
+
+            }
+
+            &:hover>p::after {
+                width: 15%;
+            }
+        }
+    }
 }

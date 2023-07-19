@@ -9,19 +9,14 @@
 .backic {
     position: relative;
     width: 100%;
-    z-index: -5;
+    z-index: 5;
 
     >img {
-        position: absolute;
         width: 12%;
-
-        &:hover {
-            transform: rotate(40deg);
-        }
 
         &:nth-of-type(1) {
             z-index: 3;
-            top: 0;
+            top: 6vw;
             left: 20vw;
         }
 
@@ -54,10 +49,11 @@
 main {
     position: relative;
     overflow: hidden;
-    margin: 5vw auto;
+    margin: 0 auto;
     width: 100%;
     flex-direction: column;
     @include flex();
+    padding-bottom: 10vw;
 
     article {
         margin-bottom: 10vw;
@@ -76,8 +72,9 @@ main {
             img {
                 width: 50%;
             }
+
             figure {
-                
+
                 flex-grow: 1;
                 @include flex(center);
                 flex-direction: column;
@@ -92,12 +89,14 @@ main {
 
 
     >article:nth-of-type(1) {
+        position: relative;
+
         h2 {
-            width: 100%;
+            width: 150%;
             font-size: 7vw;
             margin: 0;
             position: absolute;
-            top: 4vw;
+            top: 5%;
             left: 50%;
             transform: translatex(-50%);
             z-index: 2;
@@ -130,6 +129,7 @@ main {
 
         >div {
             display: flex;
+
             &:nth-of-type(2) {
                 position: relative;
 
@@ -172,27 +172,32 @@ main {
                     }
                 }
             }
-            &:nth-of-type(3),&:nth-of-type(5){
-                >img{
+
+            &:nth-of-type(3),
+            &:nth-of-type(5) {
+                >img {
                     margin-bottom: 10vw;
                 }
             }
+
             figcaption {
                 p {
                     margin: 1vw 0 0.5vw;
                 }
             }
-            &:nth-of-type(4){
+
+            &:nth-of-type(4) {
                 position: relative;
-            
-            .maxb {
-                display: flex;
-                position: absolute;
-                top: 30vw;
-                left: 7vw;
-                width: 10%;
+
+                .maxb {
+                    display: flex;
+                    position: absolute;
+                    top: 30%;
+                    left: 7vw;
+                    width: 10%;
+                }
             }
-            }
+
             &:nth-of-type(5) {
                 position: relative;
 
@@ -227,6 +232,7 @@ main {
             div {
                 a {
                     width: 23%;
+
                     figure {
                         figcaption {
                             text-align: left;
@@ -273,16 +279,20 @@ main {
             width: 80%;
             height: 90vw;
 
-            a {width: 48%;
+            a {
+                width: 48%;
                 display: block;
                 position: absolute;
                 color: black;
+                overflow: hidden;
 
                 figure {
                     margin-top: 0;
                     @include flex(normal, flex-start);
                     width: 100%;
-
+                    transition: 1s;
+                    opacity: 0;
+                    transform: translateY(100%);
                     img {
                         width: 100%;
                     }
@@ -294,6 +304,14 @@ main {
                             font-family: 'Noto Sans KR', sans-serif;
                             font-size: 1.3vw;
                         }
+                    }
+                    
+                }
+
+                &.on{
+                    figure{
+                        opacity: 1;
+                        transform: translateY(0);
                     }
                 }
             }

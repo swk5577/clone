@@ -56,6 +56,13 @@ button {
   position: absolute;
 }
 
+.backic > img {
+  position: absolute;
+}
+.backic > img:hover {
+  transform: rotate(40deg);
+}
+
 .r {
   display: flex;
 }
@@ -64,8 +71,7 @@ button {
 }
 
 .fullshop {
-  transform: translateX(100%);
-  padding-left: 10vw !important;
+  transform: translateX(80%);
 }
 
 .shop {
@@ -101,6 +107,7 @@ button {
 }
 
 .fullshop .sbt {
+  text-align: center;
   position: relative;
 }
 .fullshop span {
@@ -147,6 +154,15 @@ button:nth-of-type(2):after {
   align-items: center;
 }
 
+.evt figure {
+  opacity: 0;
+  transform: translateY(100%);
+}
+.evt a.on figure {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .top {
   position: fixed;
   right: 2vw;
@@ -165,13 +181,21 @@ button:nth-of-type(2):after {
   font-family: material symbols outlined;
 }
 
+.ab {
+  position: absolute;
+}
+
 figure {
   word-break: keep-all;
 }
 
+main {
+  padding-top: 10vw;
+}
+
 header {
-  z-index: 5;
-  position: relative;
+  z-index: 10;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,22 +203,22 @@ header {
   height: 8vw;
   padding: 0 3%;
   background-color: #f0ede6;
+  transition: 1s;
 }
 header img {
   width: 12vw;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   transition: 0.5s;
 }
-header nav {
+header .nav_pc {
   z-index: 5;
   height: 100%;
 }
-header nav > ul {
+header .nav_pc > ul {
   height: 100%;
   display: flex;
 }
-header nav > ul > li {
+header .nav_pc > ul > li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,16 +226,16 @@ header nav > ul > li {
   width: 150%;
   position: relative;
 }
-header nav > ul > li:hover:nth-of-type(1) .n_bradns {
+header .nav_pc > ul > li:hover:nth-of-type(1) .n_bradns {
   display: block;
 }
-header nav > ul > li:hover:nth-of-type(2) .n_outdoor {
+header .nav_pc > ul > li:hover:nth-of-type(2) .n_outdoor {
   display: block;
 }
-header nav > ul > li:hover:nth-of-type(3) .n_indoor {
+header .nav_pc > ul > li:hover:nth-of-type(3) .n_indoor {
   display: block;
 }
-header nav > ul > li > a {
+header .nav_pc > ul > li > a {
   padding: 0 1.5vw;
   line-height: 2;
   display: inline;
@@ -220,7 +244,7 @@ header nav > ul > li > a {
   transition: 0.5s;
   color: black;
 }
-header nav > ul > li > a:nth-of-type(1):hover .n_bradns {
+header .nav_pc > ul > li > a:nth-of-type(1):hover .n_bradns {
   opacity: 100%;
 }
 header .n_bradns,
@@ -261,7 +285,7 @@ header .nav_no > p::after {
 header .nav_no > p.on::after {
   content: "close";
 }
-header .nav_no > p.on + div.mo_sub {
+header .nav_no > p.on + ul.mo_sub {
   opacity: 1;
   transform: scale(1);
 }
@@ -282,18 +306,71 @@ header .mo_sub {
   display: none;
 }
 header .mo_sub a {
-  margin-left: 4vw;
+  position: relative;
+  margin-left: 7vw;
+  width: 50%;
   display: block;
   line-height: 3;
   font-size: 6vw;
   font-weight: bolder;
   color: black;
 }
+header .mo_sub a::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  padding: 5%;
+  background: url(../img/layer-hand2.png) center/100% no-repeat;
+  display: none;
+}
+header .mo_sub a:hover::after {
+  display: block;
+}
+header .mo_sub > li {
+  width: 50%;
+  position: relative;
+  margin-left: 7vw;
+  line-height: 3;
+  font-size: 6vw;
+  font-weight: bolder;
+  color: black;
+}
+header .mo_sub > li::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  padding: 5%;
+  background: url(../img/layer-hand2.png) center/100% no-repeat;
+  display: none;
+}
+header .mo_sub > li:hover::after {
+  display: block;
+}
+header .mo_sub > li > ul {
+  position: fixed;
+  right: 20vw;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+header .mo_sub > li > ul a {
+  font-size: 4vw;
+  width: 100%;
+}
+header .mo_sub > li:hover > ul {
+  display: block;
+}
+
+header.up {
+  transform: translateY(-100%);
+}
 
 footer {
   background-color: black;
   width: 100%;
-  margin-top: 20vw;
+  margin-top: 5vw;
   position: relative;
 }
 footer > div:nth-of-type(1) {
@@ -301,7 +378,7 @@ footer > div:nth-of-type(1) {
   width: 100%;
   overflow: hidden;
   position: absolute;
-  transform: translateY(-60%);
+  transform: translateY(-90%);
 }
 footer > div:nth-of-type(1) img {
   width: 120%;
@@ -309,7 +386,7 @@ footer > div:nth-of-type(1) img {
 footer > div:nth-of-type(2) {
   width: 80%;
   margin: 0 auto;
-  padding-top: 10vw;
+  padding-top: 5vw;
 }
 footer > div:nth-of-type(2) > div:nth-of-type(1) {
   width: 100%;
@@ -317,31 +394,35 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) {
 footer > div:nth-of-type(2) > div:nth-of-type(1) > p {
   color: white;
 }
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
+footer > div:nth-of-type(2) > div:nth-of-type(1) > .fpbt {
   font-size: 1vw;
   font-weight: bold;
   padding: 3vw 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  /*                 @include flex(flex-start); */
+  color: white;
 }
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1)::after {
-  content: "expand_more";
+footer > div:nth-of-type(2) > div:nth-of-type(1) > .fpbt > span {
+  display: inline-block;
   font-family: material symbols outlined;
 }
-footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1),
-footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(3) {
+footer > div:nth-of-type(2) > div:nth-of-type(1) > .fpbt > span.tun2 {
+  transform: rotate(180deg);
+}
+footer > div:nth-of-type(2) > div:nth-of-type(1) .fpbt,
+footer > div:nth-of-type(2) > div:nth-of-type(1) p:nth-of-type(1) {
   font-family: "Libre Baskerville", serif;
 }
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(2) {
+footer > div:nth-of-type(2) > div:nth-of-type(1) > .fpbt > p {
+  padding-top: 2%;
+  display: none;
   white-space: pre-line;
   color: #666;
   line-height: 1.2;
   font-size: 0.8vw;
 }
-footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(3) {
+footer > div:nth-of-type(2) > div:nth-of-type(1) > p:nth-of-type(1) {
   font-size: 1.3vw;
-  padding: 4vw 0;
+  padding-bottom: 3vw;
   color: #666;
 }
 footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) {
@@ -383,13 +464,13 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
   h2 {
     margin-bottom: 0;
   }
-  .ivt {
+  .evt {
     height: 250vw !important;
   }
-  .ivt a {
+  .evt a {
     width: 70% !important;
   }
-  .ivt a b {
+  .evt a b {
     font-size: 5vw !important;
   }
   .dil {
@@ -402,7 +483,10 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
     display: block;
   }
   .mainimg {
-    width: 90%;
+    width: 90% !important;
+  }
+  main {
+    padding-top: 20vw;
   }
   header {
     height: 18vw;
@@ -430,10 +514,12 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
     width: 100% !important;
   }
   .figup figcaption b {
+    white-space: normal;
     font-size: 6vw !important;
     font-weight: 600 !important;
   }
   .figup figcaption p {
+    white-space: normal;
     font-size: 4vw !important;
     font-weight: 500 !important;
   }
@@ -497,12 +583,23 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
   .fota p {
     font-size: 4vw !important;
   }
+  .swiper-slide {
+    margin-right: 5% !important;
+  }
+  .insta > div {
+    flex-wrap: wrap;
+  }
+  .insta a {
+    margin-top: 2%;
+    width: 48% !important;
+    height: 35vw !important;
+  }
 }
 @media (min-width: 540px) and (max-width: 1024px) {
-  .ivt {
+  .evt {
     height: 90vw !important;
   }
-  .ivt figure {
+  .evt figure {
     width: 100% !important;
   }
   h2 br {
@@ -544,6 +641,9 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
   footer > div:nth-of-type(2) nav > a p {
     display: block;
   }
+  .fullshop {
+    padding-left: 10vw !important;
+  }
 }
 @media (min-width: 1024px) {
   h2 br {
@@ -569,6 +669,9 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
   }
   footer > div:nth-of-type(2) nav > a p {
     display: block;
+  }
+  .fullshop {
+    padding-left: 10vw !important;
   }
 }
 .tun {
@@ -896,4 +999,4 @@ body > div a p::after {
 }
 body > div a:hover > p::after {
   width: 20%;
-}
+}/*# sourceMappingURL=so_shic.css.map */
