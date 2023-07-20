@@ -14,9 +14,15 @@ $moba : '540px';
     h2{margin-bottom: 0;}
 
     .evt{
-        height: 250vw!important;
+        overflow: hidden;
+        height: auto !important;
         a{
+            position: static!important;
             width: 70%!important;
+
+            &:nth-of-type(2n){
+                float: right;
+            }
             b{
                 font-size: 5vw!important;
             }
@@ -154,10 +160,13 @@ $moba : '540px';
 @media (min-width:$moba) and (max-width:$note)
 {   
     .evt{
-        height:90vw !important;
+        height: auto !important;
         figure{
             width: 100% !important;
         }
+    }
+    .indevt{
+        height: 90vw !important;
     }
 
     h2{

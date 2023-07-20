@@ -1,6 +1,5 @@
 @import "_reset";
 @import "_mixin";
-@import "_midia";
 @import "_anima";
 
 
@@ -290,3 +289,5 @@ body {
         }
     }
 }
+
+@import "_midia";

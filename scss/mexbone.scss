@@ -1,17 +1,26 @@
 @import "_reset";
 @import "_mixin";
-@import "_midia";
 @import "_anima";
 
 img {
     width: 100%
 }
 
+
 main {
     position: relative;
     z-index: 2;
     margin: 0 auto;
     background-color: #f0ede6;
+
+    >.backimg{
+        img {
+            top: 5%;
+            left: 0;
+            width: 100%;
+        }
+        
+    }
 
     article:nth-of-type(1) {
         width: 90%;
@@ -35,10 +44,6 @@ main {
             position: relative;
 
             & div:nth-of-type(1) {
-                img {
-                    width: 100%;
-                }
-
                 width: 60%;
                 margin: 0 auto;
             }
@@ -46,12 +51,6 @@ main {
             >.backimg {
                 img {
                     &:nth-of-type(1) {
-                        top: 5%;
-                        left: 0;
-                        width: 100%;
-                    }
-
-                    &:nth-of-type(2) {
                         top: 30%;
                         left: 5%;
                         width: 12%;
@@ -131,18 +130,16 @@ main {
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
-            figure{
+            a{
                 width: 40%;
-
-                >b{
-                    font-size: 1.5vw;
-                    text-align: left;
-                }
-
+                font-size: 1.5vw;
+                text-align: left;
+                color: black;
                 &:nth-of-type(2n){
                     margin-top: 10vw;
                 }
             }
+            
 
         }
 
@@ -205,3 +202,6 @@ body{
         }
     }
 }
+
+
+@import "_midia";

@@ -1,7 +1,6 @@
 @import "_reset";
 @import "_mixin";
 @import "_anima";
-@import "_midia";
 
 
 
@@ -15,9 +14,10 @@
         width: 12%;
 
         &:nth-of-type(1) {
-            z-index: 3;
-            top: 6vw;
-            left: 20vw;
+            width: 8%;
+            z-index: 2;
+            top: 7vw;
+            left: 25vw;
         }
 
         &:nth-of-type(2) {
@@ -291,8 +291,6 @@ main {
                     @include flex(normal, flex-start);
                     width: 100%;
                     transition: 1s;
-                    opacity: 0;
-                    transform: translateY(100%);
                     img {
                         width: 100%;
                     }
@@ -308,12 +306,6 @@ main {
                     
                 }
 
-                &.on{
-                    figure{
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
             }
 
             >a:nth-of-type(1) {
@@ -368,3 +360,6 @@ main {
     }
 
 }
+
+
+@import "_midia";
