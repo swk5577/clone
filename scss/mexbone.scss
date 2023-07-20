@@ -15,7 +15,7 @@ main {
 
     >.backimg{
         img {
-            top: 5%;
+            top: 6%;
             left: 0;
             width: 100%;
         }
@@ -106,11 +106,14 @@ main {
                 top: 0; right: 5%;
             }
             .maxb{
-                width: 5%;
                 display: flex;
+                width: 5%;
                 position: absolute;
                 top: 30%;
                 left: 7vw;
+                img{
+                    transform: scale(0);
+                    }
             }
         }
 

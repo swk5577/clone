@@ -518,14 +518,13 @@ footer > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(1) div nav > 
     transform: translateX(0) rotate(-20deg);
   }
 }
-.maxb img {
-  transform: scale(0);
-  animation: txt 0.3s forwards;
+.maxb img.ani {
+  animation: txt 0.3s forwards cubic-bezier(0.9, 0.04, 0.76, 1.36);
 }
-.maxb img:nth-of-type(2) {
+.maxb img.ani:nth-of-type(2) {
   animation-delay: 0.2s;
 }
-.maxb img:nth-of-type(1) {
+.maxb img.ani:nth-of-type(1) {
   animation-delay: 0.4s;
 }
 
@@ -711,6 +710,9 @@ main > article:nth-of-type(2) > div:nth-of-type(4) .maxb {
   top: 30%;
   left: 7vw;
   width: 10%;
+}
+main > article:nth-of-type(2) > div:nth-of-type(4) .maxb img {
+  transform: scale(0);
 }
 main > article:nth-of-type(2) > div:nth-of-type(5) {
   position: relative;
