@@ -253,9 +253,9 @@ header {
     .n_outdoor,
     .n_indoor {
         position: absolute;
-        top: 6vw;
+        bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%,100%);
         background-color: black;
         font-weight: bold;
         padding: 10% 0;
