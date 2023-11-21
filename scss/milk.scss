@@ -1,0 +1,249 @@
+@import "_reset";
+@import "_mixin";
+@import "_anima";
+
+
+
+main {
+    position: relative;
+    z-index: 2;
+    background-color: #f0ede6;
+    margin: 0 auto;
+    text-align: center;
+    >*{
+        margin-bottom: 15vh;
+        &:last-child, &.con2, &.con5{
+            margin-bottom: 0;
+        }
+    }
+    h2 {
+        font-size: 7vw;
+    }
+
+    //con 111111111111111111111111111
+    .maintop {
+        position: relative;
+        .d1 {
+            overflow: hidden;
+            background: url(../img/layer-line-color.png) no-repeat 0% 30%;
+            .backimg {
+                img {
+                    top: 30%;
+                    left: 0
+                }
+            }
+        }
+        
+        .d2 {
+            z-index: 1;
+            overflow: hidden;
+            &.backimg {
+                position: absolute;
+                width: 40%;
+                height: 100%;
+                top: 0;
+                right: 0;
+
+                p {
+                    position: absolute;
+                    width: 100%;
+
+                    &:nth-of-type(1) {
+                        width: 80%;
+                        top: 10%;
+                        right: 0%;
+
+                    }
+
+                    &:nth-of-type(2) {
+                        width: 35%;
+                        top: 50%;
+                        right: 40%;
+                    }
+
+                    >img {
+                        width: 100%;
+                    }
+                }
+
+            }
+        }
+
+        >p.backimg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+
+            img {
+                width: 40%;
+                z-index: 1;
+                bottom: 0;
+                transform: translateY(40%);
+                left: 0;
+            }
+        }
+    }
+
+    .figup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        >*{
+            width: 40%;
+            @media (max-width:'540px'){
+                width: 100%;
+            }
+        }
+
+        figcaption {
+            >b {
+                line-height: 2;
+                font-size: 20px;
+            }
+
+            >p {
+                line-height: 2;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    //con333333333333333333333333333
+    .con3 {
+        position: relative;
+
+        figcaption {
+            text-align: start;
+            position: relative;
+        }
+
+
+        .backimg {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0%;
+            z-index: 1;
+
+            img {
+                width: 30%;
+                bottom: 0%;
+                left: 30%;
+                transform: translateY(110%);
+
+                &:nth-of-type(1) {
+                    transform: translate(-80% , 110%);
+                }
+
+            }
+        }
+    }
+
+    //con444444444444444444444444444444444444444444
+    .con4 {
+        position: relative;
+        text-align: start;
+        >video{
+            width: 95%;
+        }
+        .backimg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .text_lin{
+        overflow: hidden;
+        font-size: 100px;
+        p{
+            white-space:nowrap;
+            animation: text_lin 5s linear infinite;
+        }
+
+    }
+    .con5 {
+        figure{
+            &:nth-child(2){
+                transform: translateY(-30%);
+            }
+        }
+    }
+
+    .maxshop{
+        overflow: hidden;
+        margin-top: 10vw;
+        padding-bottom: 10vw;
+        h2{
+            margin-bottom: 5vw;
+            text-align: center;
+            font-size: 4vw;}
+
+        >b{font-size: 1.2vw;}
+        >p{font-size: 1.1vw;}
+    }
+}
+
+body{
+    padding-bottom: 50vw;
+
+    .footer {
+        position: fixed;
+        overflow: hidden;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50vw;
+        z-index: 1;
+        @include flex();
+        background: no-repeat url(../img/pagination-petsochic.jpg) bottom/cover;
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+        }
+    
+        a {
+            color: white;
+            z-index: 1;
+            >b {
+                font-size: 8vw;
+            }
+    
+            >p {
+                font-size: 1.2vw;
+                text-align: center;
+    
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0.2vw;
+                    background-color: white;
+                    margin: 0 auto;
+                    transition: 0.5s;
+                }
+    
+            }
+    
+            &:hover>p::after {
+                width: 15%;
+            }
+        }
+    }
+}
+@keyframes text_lin{
+    0%{transform: translateX(0%)}
+    100%{transform: translateX(-96%)}
+}
+
+
+@import "_midia";
