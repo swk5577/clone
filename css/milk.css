@@ -709,10 +709,10 @@ main .maxshop h2 {
   text-align: center;
   font-size: 4vw;
 }
-main .maxshop > b {
+main .maxshop b {
   font-size: 1.2vw;
 }
-main .maxshop > p {
+main .maxshop p {
   font-size: 1.1vw;
 }
 

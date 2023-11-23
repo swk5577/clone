@@ -690,10 +690,10 @@ main .maxshop h2 {
   text-align: center;
   font-size: 4vw;
 }
-main .maxshop > b {
+main .maxshop b {
   font-size: 1.2vw;
 }
-main .maxshop > p {
+main .maxshop p {
   font-size: 1.1vw;
 }
 
@@ -710,7 +710,7 @@ body > .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: no-repeat url(../img/pagination-milknpepper.jpg) bottom/cover;
+  background: no-repeat url(../img/intro-milknpepper-poster.jpg) bottom/cover;
 }
 body > .footer a {
   color: white;

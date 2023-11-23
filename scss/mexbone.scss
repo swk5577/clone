@@ -157,8 +157,8 @@ main {
             text-align: center;
             font-size: 4vw;}
 
-        >b{font-size: 1.2vw;}
-        >p{font-size: 1.1vw;}
+        b{font-size: 1.2vw;}
+        p{font-size: 1.1vw;}
     }
     
 }
@@ -174,7 +174,7 @@ body{
         height: 50vw;
         z-index: 1;
         @include flex();
-        background: no-repeat url(../img/pagination-milknpepper.jpg) bottom/cover;
+        background: no-repeat url(../img/intro-milknpepper-poster.jpg) bottom/cover;
 
         a {
             color: white;
